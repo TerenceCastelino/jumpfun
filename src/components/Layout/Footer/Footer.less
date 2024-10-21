@@ -1,0 +1,37 @@
+@import '../../../utils/styles/colors.less';
+@import '../../../utils/styles/mixins/mixinQuery.less';
+
+
+.footer{
+ 
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center; /* Centrer le texte */
+  color: @secondary;
+  background-color:@backgroundLight;
+  align-items: center;
+  
+
+  a {
+
+    color: @secondary;
+    margin-right: 15px;
+    text-decoration: none;
+
+    &:hover {
+      color: @primary;
+    }
+    img{
+      height: 20px;
+      width: auto;
+    }
+  }
+  
+}
+@media (max-width: 800px) {
+ .footer{
+  color: rgb(255, 127, 227);
+  .set-font-size(53px);
+ }
+ }

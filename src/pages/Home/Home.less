@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Londrina+Sketch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Londrina+Sketch&display=swap');
+
+.homeContainer{
+    margin: 2vw 10vw 10vw 15vw;
+  
+
+    .headerTitleContainer {
+        // border: 5px black solid;
+        display: flex;
+        justify-content: space-around;
+        // background-color: rgba(0, 166, 249, 0.614);
+        border-radius: 20px;
+        color: rgb(3, 3, 3);
+       
+      
+        padding: 20px;
+    
+        img {
+            height: 20vw;
+            width: auto;
+            border: 3px black solid;
+            border-radius: 50%;
+        }
+    
+        .titleContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+    
+            h1{
+                font-size: 8rem;
+                font-weight: 900;
+                font-family: 'Dancing Script', cursive;
+                letter-spacing: 0em;
+                line-height: 0.9;
+               font-stretch: ultra-expanded;
+            }
+            h2 {
+                font-family: 'Dancing Script', cursive; /* Utilisez 'Dancing Script' pour le h2 */
+            }
+            
+        }
+    }
+    .presentationContainer{
+        border: 5px black solid;
+        display: flex;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.682);
+        border-radius: 20px;
+        flex-direction: column;
+        margin-top: 10vw;
+      
+        h3 {
+            font-family: 'Dancing Script', cursive;
+            margin: 20px auto 30px auto; /* 20px en haut, auto pour centrer à droite/gauche, 30px en bas */
+            text-align: center; /* Centre le texte à l'intérieur de l'élément */
+            font-weight: 700; /* Utilise une version plus épaisse de la police */
+            letter-spacing: 4px; /* Augmente l'espacement des lettres */
+            font-size: 2rem;
+            // text-shadow: 1px 1px 2px #000; /* Ajoute un léger contour pour améliorer la visibilité */
+        }
+        
+        
+        .contenuPresentationContainer{
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0 20px;
+
+            img{
+                width: 50%;
+                height: auto;
+                border-radius: 5px;
+                border: 5px solid pink;
+            }
+            .contenuPresentation{
+              
+               font-size: 1.2rem;
+                width: 30%;
+              
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                p{
+                    margin: 1rem;
+                    letter-spacing: 3px; /* Augmente l'espacement des lettres */
+                }
+                button{
+                    
+                  text-align: center;
+                    background: #0cc634;
+                    width: 10vw;
+                    padding: 15px;
+                    border-radius: 5px;
+                    border: 2px soldi black;
+                    
+                }
+
+            }
+        }
+    }
+}

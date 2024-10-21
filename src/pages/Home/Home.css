@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXooxW4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Londrina Sketch';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/londrinasketch/v25/c4m41npxGMTnomOHtRU68eIJn8qfWQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXooxW4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dancingscript/v25/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BMSoHTQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dancingscript/v25/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BAyoHTQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dancingscript/v25/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7B7y0HTQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/dancingscript/v25/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7B1i0HTQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Edu AU VIC WA NT Guides';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/eduauvicwantguides/v1/TuG-UUJ4V48KZ9Nr3ZV46JQkJxtkFIKnvy00LCZuAcLMeb8FnyPdK1Zazg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Edu AU VIC WA NT Guides';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/eduauvicwantguides/v1/TuG-UUJ4V48KZ9Nr3ZV46JQkJxtkFIKnvy00LCZuAcLMeb8FnyPdGVZazg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Edu AU VIC WA NT Guides';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/eduauvicwantguides/v1/TuG-UUJ4V48KZ9Nr3ZV46JQkJxtkFIKnvy00LCZuAcLMeb8FnyPd9VFazg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Edu AU VIC WA NT Guides';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/eduauvicwantguides/v1/TuG-UUJ4V48KZ9Nr3ZV46JQkJxtkFIKnvy00LCZuAcLMeb8FnyPdzFFazg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Londrina Sketch';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/londrinasketch/v25/c4m41npxGMTnomOHtRU68eIJn8qfWQ.ttf) format('truetype');
+}
+.homeContainer {
+  margin: 2vw 10vw 10vw 15vw;
+}
+.homeContainer .headerTitleContainer {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 20px;
+  color: #030303;
+  padding: 20px;
+}
+.homeContainer .headerTitleContainer img {
+  height: 20vw;
+  width: auto;
+  border: 3px black solid;
+  border-radius: 50%;
+}
+.homeContainer .headerTitleContainer .titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.homeContainer .headerTitleContainer .titleContainer h1 {
+  font-size: 8rem;
+  font-weight: 900;
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: 0em;
+  line-height: 0.9;
+  font-stretch: ultra-expanded;
+}
+.homeContainer .headerTitleContainer .titleContainer h2 {
+  font-family: 'Dancing Script', cursive;
+  /* Utilisez 'Dancing Script' pour le h2 */
+}
+.homeContainer .presentationContainer {
+  border: 5px black solid;
+  display: flex;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.682);
+  border-radius: 20px;
+  flex-direction: column;
+  margin-top: 10vw;
+}
+.homeContainer .presentationContainer h3 {
+  font-family: 'Dancing Script', cursive;
+  margin: 20px auto 30px auto;
+  /* 20px en haut, auto pour centrer à droite/gauche, 30px en bas */
+  text-align: center;
+  /* Centre le texte à l'intérieur de l'élément */
+  font-weight: 700;
+  /* Utilise une version plus épaisse de la police */
+  letter-spacing: 4px;
+  /* Augmente l'espacement des lettres */
+  font-size: 2rem;
+}
+.homeContainer .presentationContainer .contenuPresentationContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 20px;
+}
+.homeContainer .presentationContainer .contenuPresentationContainer img {
+  width: 50%;
+  height: auto;
+  border-radius: 5px;
+  border: 5px solid pink;
+}
+.homeContainer .presentationContainer .contenuPresentationContainer .contenuPresentation {
+  font-size: 1.2rem;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.homeContainer .presentationContainer .contenuPresentationContainer .contenuPresentation p {
+  margin: 1rem;
+  letter-spacing: 3px;
+  /* Augmente l'espacement des lettres */
+}
+.homeContainer .presentationContainer .contenuPresentationContainer .contenuPresentation button {
+  text-align: center;
+  background: #0cc634;
+  width: 10vw;
+  padding: 15px;
+  border-radius: 5px;
+  border: 2px soldi black;
+}

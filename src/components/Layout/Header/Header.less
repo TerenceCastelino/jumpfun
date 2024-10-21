@@ -1,0 +1,107 @@
+@import '../../../utils/styles/colors.less';
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Londrina+Sketch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Londrina+Sketch&display=swap');
+
+@keyframes bg {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.header {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  color: @secondary;
+  overflow: hidden; /* Cache le débordement des nuages */
+  z-index: 1; /* Assurez-vous que .header est au-dessus de .background-animation */
+  background-color: rgba(7, 2, 1, 0.764);
+
+
+  .background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Deux fois la largeur pour deux images */
+    height: 100%;
+    display: flex;
+    z-index: -1; /* Met les nuages en arrière-plan */
+
+    .bg-layer {
+      width: 50%; /* Chaque image prend la moitié de la largeur du conteneur */
+      height: 100%;
+      background:
+        url(https://sebbrico.fr/upload_perso/fog_perso1.png) 20% 50%,
+        url(https://sebbrico.fr/upload_perso/fog_perso2.png) 50% 50%,
+        url(https://sebbrico.fr/upload_perso/fog_perso3.png) 10% 50%;
+      background-repeat: repeat-x;
+      background-size: contain; /* Ajustez si nécessaire */
+      animation: bg 60s linear infinite; /* Animation de 60 secondes pour une vitesse plus lente */
+    }
+  }
+
+  .b {
+    position: relative; /* Assure que .b reste au-dessus de .background-animation */
+    z-index: 1; /* .b au-dessus des nuages */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  p {
+    font-family: 'Dancing Script', cursive;
+    color: aliceblue;
+    position: relative; /* Nécessaire pour le positionnement absolu du pseudo-élément */
+    transition: color 0.3s ease, transform 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px; /* Ajustez selon vos besoins */
+      width: 100%;
+      height: 2px; /* Ajustez selon vos besoins */
+      background-color: rgb(255, 212, 153);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  img {
+    width: 50px;
+    transition: transform 0.3s ease;
+  }
+
+  a {
+    color: @secondary;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+
+    &:hover {
+      color: @primary;
+
+      img {
+        transform: scale(1.3);
+      }
+
+      p {
+        color: rgb(255, 212, 153);
+        transform: translateY(7px);
+
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
