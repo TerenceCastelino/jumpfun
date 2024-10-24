@@ -1,0 +1,71 @@
+.containerCard {
+  border: 7px solid #241f1f;
+  width: 29vw;
+  border-radius: 5%;
+  margin: 1vw;
+  padding: 1vw;
+  background-color: rgba(21, 14, 5, 0.836);
+}
+.containerCard .titleContainer {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: rgba(240, 248, 255, 0.73);
+  backdrop-filter: blur(3px);
+  margin: 1vw 0;
+}
+.containerCard .containerImg {
+  position: relative;
+}
+.containerCard .containerImg img.imageCurent {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  /* Remplit le conteneur sans déformer l'image */
+  background-color: black;
+}
+.containerCard .containerImg button {
+  position: absolute;
+  background-color: rgba(240, 248, 255, 0.003);
+  border: 1px solid rgba(240, 248, 255, 0.003);
+  height: 3vw;
+  width: 3vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.containerCard .containerImg button:first-of-type {
+  left: 1vw;
+}
+.containerCard .containerImg button:first-of-type img {
+  transform: rotate(180deg);
+  width: 100%;
+  height: 100%;
+}
+.containerCard .containerImg button:last-of-type {
+  right: 1vw;
+}
+.containerCard .containerImg button:last-of-type img {
+  width: 100%;
+  height: 100%;
+}
+.containerCard .indication {
+  background-color: rgba(255, 252, 240, 0.604);
+  display: flex;
+  justify-content: space-around;
+  padding: 0.75vw;
+  margin: 1vw 0;
+}
+.containerCard .indication div {
+  width: 33%;
+  text-align: center;
+}
+.containerCard .indication div img {
+  height: 2vw;
+  width: 2vw;
+}
+.containerCard .indication div img.longeur {
+  transform: rotate(90deg);
+}
+.containerCard .indication div img.largeur {
+  transform: rotate(135deg);
+}
