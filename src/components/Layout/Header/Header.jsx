@@ -25,7 +25,7 @@ function Header() {
     };
 
     const getLinkClass = (path) => {
-        return location.pathname === path ? 'selection' : '';
+        return location.pathname === path ? 'active' : 'inactive';
     };
 
     return (

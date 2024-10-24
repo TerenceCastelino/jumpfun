@@ -44,29 +44,40 @@
     font-size: 1.2rem;
     font-weight: 800;
 
-    &:hover {
-      color: @primary;
+    .inactive{
 
-      img {
-        transform: scale(1.3);
-      }
-
-      p {
-        color: white;
-        transform: translateY(7px);
-
-        &::after {
-          transform: scaleX(1);
+      &:hover {
+        color: @primary;
+  
+        img {
+          transform: scale(1.3);
         }
+  
+        p {
+          color: white;
+          transform: translateY(7px);
+  
+          &::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+    .active{
+      
+      p {
+        color: rgb(255, 212, 153);
+        transform: translateY(7px);
+      }
+      &:hover {
+        p {
+          color: rgb(255, 212, 153);
+          transform: translateY(7px);
+        }
+
       }
     }
   }
 }
 
-.selection {
-  color: rgb(255, 212, 153);
 
-  p {
-    color: rgb(255, 212, 153);
-  }
-}

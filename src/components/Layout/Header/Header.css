@@ -39,22 +39,24 @@
   font-size: 1.2rem;
   font-weight: 800;
 }
-.header a:hover {
+.header a .inactive:hover {
   color: #ffb300;
 }
-.header a:hover img {
+.header a .inactive:hover img {
   transform: scale(1.3);
 }
-.header a:hover p {
+.header a .inactive:hover p {
   color: white;
   transform: translateY(7px);
 }
-.header a:hover p::after {
+.header a .inactive:hover p::after {
   transform: scaleX(1);
 }
-.selection {
+.header a .active p {
   color: #ffd499;
+  transform: translateY(7px);
 }
-.selection p {
+.header a .active:hover p {
   color: #ffd499;
+  transform: translateY(7px);
 }
