@@ -1,171 +1,100 @@
-@font-face {
-  font-family: 'Bebas Neue';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXooxW4.ttf) format('truetype');
+.containerHome {
+  background-color: #f3e4bc;
+  height: 100vh;
 }
-@font-face {
-  font-family: 'Londrina Sketch';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/londrinasketch/v25/c4m41npxGMTnomOHtRU68eIJn8qfWQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Bebas Neue';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXooxW4.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Dancing Script';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dancingscript/v25/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BMSoHTQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Dancing Script';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dancingscript/v25/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BAyoHTQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Dancing Script';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dancingscript/v25/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7B7y0HTQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Dancing Script';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dancingscript/v25/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7B1i0HTQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Edu AU VIC WA NT Guides';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/eduauvicwantguides/v1/TuG-UUJ4V48KZ9Nr3ZV46JQkJxtkFIKnvy00LCZuAcLMeb8FnyPdK1Zazg.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Edu AU VIC WA NT Guides';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/eduauvicwantguides/v1/TuG-UUJ4V48KZ9Nr3ZV46JQkJxtkFIKnvy00LCZuAcLMeb8FnyPdGVZazg.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Edu AU VIC WA NT Guides';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/eduauvicwantguides/v1/TuG-UUJ4V48KZ9Nr3ZV46JQkJxtkFIKnvy00LCZuAcLMeb8FnyPd9VFazg.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Edu AU VIC WA NT Guides';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/eduauvicwantguides/v1/TuG-UUJ4V48KZ9Nr3ZV46JQkJxtkFIKnvy00LCZuAcLMeb8FnyPdzFFazg.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Londrina Sketch';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/londrinasketch/v25/c4m41npxGMTnomOHtRU68eIJn8qfWQ.ttf) format('truetype');
-}
-.homeContainer {
-  margin: 2vw 10vw 10vw 15vw;
-}
-.homeContainer .headerTitleContainer {
+.headerTitleContainer {
+  position: relative;
   display: flex;
+  width: 100%;
+  height: 400px;
+  background-image: url('../../assets/images/imageFond/fondRR.jpg');
+  background-size: cover;
   justify-content: space-around;
-  border-radius: 20px;
-  color: #030303;
-  padding: 20px;
+  box-sizing: border-box;
+  /* Inclure les bordures dans les dimensions */
+  z-index: 1;
+  animation: move2Background 30s infinite alternate;
 }
-.homeContainer .headerTitleContainer img {
-  height: 20vw;
-  width: auto;
-  border: 3px black solid;
-  border-radius: 50%;
+.headerTitleContainer .image3 {
+  position: absolute;
+  z-index: 2;
+  background-image: url('../../assets/images/imageFond/fondTransColors2.png');
+  height: 100%;
+  /* Utiliser 100% pour correspondre à la hauteur du conteneur parent */
+  width: 100%;
+  box-sizing: border-box;
+  /* Inclure les bordures dans les dimensions */
+  border: 10px solid black;
+  animation: moveBackground 30s infinite alternate;
 }
-.homeContainer .headerTitleContainer .titleContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-.homeContainer .headerTitleContainer .titleContainer h1 {
-  font-size: 8rem;
-  font-weight: 900;
-  font-family: 'Dancing Script', cursive;
-  letter-spacing: 0em;
-  line-height: 0.9;
-  font-stretch: ultra-expanded;
-}
-.homeContainer .headerTitleContainer .titleContainer h2 {
-  font-family: 'Dancing Script', cursive;
-  /* Utilisez 'Dancing Script' pour le h2 */
-}
-.homeContainer .presentationContainer {
-  border: 5px black solid;
-  display: flex;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.682);
-  border-radius: 20px;
-  flex-direction: column;
-  margin-top: 10vw;
-}
-.homeContainer .presentationContainer h3 {
-  font-family: 'Dancing Script', cursive;
-  margin: 20px auto 30px auto;
-  /* 20px en haut, auto pour centrer à droite/gauche, 30px en bas */
-  text-align: center;
-  /* Centre le texte à l'intérieur de l'élément */
-  font-weight: 700;
-  /* Utilise une version plus épaisse de la police */
-  letter-spacing: 4px;
-  /* Augmente l'espacement des lettres */
-  font-size: 2rem;
-}
-.homeContainer .presentationContainer .contenuPresentationContainer {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0 20px;
-}
-.homeContainer .presentationContainer .contenuPresentationContainer img {
-  width: 50%;
-  height: auto;
-  border-radius: 5px;
-  border: 5px solid pink;
-}
-.homeContainer .presentationContainer .contenuPresentationContainer .contenuPresentation {
-  font-size: 1.2rem;
-  width: 30%;
+.headerTitleContainer .titleContainer {
+  z-index: 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
+  background-color: rgba(255, 253, 230, 0.125);
+  padding: 10px;
+  backdrop-filter: blur(3px);
 }
-.homeContainer .presentationContainer .contenuPresentationContainer .contenuPresentation p {
-  margin: 1rem;
-  letter-spacing: 3px;
-  /* Augmente l'espacement des lettres */
+.headerTitleContainer .titleContainer h1 {
+  font-size: 10rem;
+  font-weight: 900;
 }
-.homeContainer .presentationContainer .contenuPresentationContainer .contenuPresentation button {
-  text-align: center;
-  background: #0cc634;
-  width: 10vw;
-  padding: 15px;
-  border-radius: 5px;
-  border: 2px soldi black;
+.headerTitleContainer .titleContainer h2 {
+  text-decoration: underline;
+  text-decoration-color: #050505;
+  /* Couleur de l'underline */
+  text-decoration-style: solid;
+  /* Style de l'underline : solid, dotted, dashed, double, wavy */
+  text-decoration-thickness: 1px;
+  /* Épaisseur de l'underline */
+  text-underline-offset: 7px;
+  border-radius: 15px;
+}
+.headerTitleContainer .styleLogo {
+  z-index: 3;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.733);
+  backdrop-filter: blur(3px);
+  border: 10px solid #ffd499;
+  height: 80%;
+  width: auto;
+  border-radius: 50%;
+  box-sizing: border-box;
+  /* Inclure les bordures dans les dimensions */
+}
+@keyframes moveBackground {
+  0% {
+    background-position: center;
+    background-size: 100% 400px;
+  }
+  25% {
+    background-position: 52% 48%;
+    background-size: 101% 405px;
+  }
+  50% {
+    background-position: 51% 49%;
+    background-size: 125%  510px;
+  }
+  75% {
+    background-position: 52% 50%;
+    background-size: 101% 390px;
+  }
+  100% {
+    background-position: center;
+    background-size: 100% 400px;
+  }
+}
+@keyframes move2Background {
+  0% {
+    background-position: center;
+  }
+  50% {
+    background-position: 40% 40%;
+  }
+  100% {
+    background-position: center;
+  }
 }

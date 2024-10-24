@@ -1,39 +1,55 @@
-/* Index.css */
-@import './utils//styles/colors.less';
-*{
-    margin: 0;
-    padding: 0;}
+@import './utils/styles/colors.less';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Londrina+Sketch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Londrina+Sketch&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: 'Dancing Script', cursive;
+  font-stretch: ultra-expanded;
+}
+
+p {
+  font-family: 'Londrina+Sketch', cursive;
+}
 
 /* Appliquer à l'ensemble du corps de la page */
 .body {
-    display: flex;
-    flex-direction: column; /* Disposer les éléments en colonne */
-    min-height: 100vh; /* La hauteur minimale est de 100% de la fenêtre */
-    margin: 0; /* Supprimer les marges par défaut */
-   
-  /////////////////////////////
-  // // background-image: url('C:/Users/teren/Desktop/funjumplocation/jumpfun/src/assets/images/imageFond/fondYouplaBoum.jpg');
+  display: flex;
+  flex-direction: column; /* Disposer les éléments en colonne */
+  min-height: 100vh; /* La hauteur minimale est de 100% de la fenêtre */
+  margin: 0; /* Supprimer les marges par défaut */
   background-image: url('C:/Users/teren/Desktop/funjumplocation/jumpfun/src/assets/images/imageFond/fondRR.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  
+  animation: moveIndexBackground 20s infinite alternate;
 
- 
-  
- 
-  }
-  
   #root {
     flex: 1; /* Permet au conteneur principal de prendre l'espace restant */
   }
-  
- 
-  
+
   .footerContainer {
-
-
     margin-top: auto; /* Force le footer à rester en bas */
   }
-  
+}
+
+@keyframes moveIndexBackground {
+  0% {
+    background-position: center;
+  }
+ 
+  50% {
+    background-position: 40% 40%;
+    
+  }
+  100% {
+    background-position: center;
+  }
+}
+

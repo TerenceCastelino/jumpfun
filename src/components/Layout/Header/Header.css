@@ -1,95 +1,3 @@
-@font-face {
-  font-family: 'Bebas Neue';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXooxW4.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Londrina Sketch';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/londrinasketch/v25/c4m41npxGMTnomOHtRU68eIJn8qfWQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Bebas Neue';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXooxW4.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Dancing Script';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dancingscript/v25/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BMSoHTQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Dancing Script';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dancingscript/v25/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BAyoHTQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Dancing Script';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dancingscript/v25/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7B7y0HTQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Dancing Script';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dancingscript/v25/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7B1i0HTQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Edu AU VIC WA NT Guides';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/eduauvicwantguides/v1/TuG-UUJ4V48KZ9Nr3ZV46JQkJxtkFIKnvy00LCZuAcLMeb8FnyPdK1Zazg.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Edu AU VIC WA NT Guides';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/eduauvicwantguides/v1/TuG-UUJ4V48KZ9Nr3ZV46JQkJxtkFIKnvy00LCZuAcLMeb8FnyPdGVZazg.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Edu AU VIC WA NT Guides';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/eduauvicwantguides/v1/TuG-UUJ4V48KZ9Nr3ZV46JQkJxtkFIKnvy00LCZuAcLMeb8FnyPd9VFazg.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Edu AU VIC WA NT Guides';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/eduauvicwantguides/v1/TuG-UUJ4V48KZ9Nr3ZV46JQkJxtkFIKnvy00LCZuAcLMeb8FnyPdzFFazg.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Londrina Sketch';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/londrinasketch/v25/c4m41npxGMTnomOHtRU68eIJn8qfWQ.ttf) format('truetype');
-}
-@keyframes bg {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 .header {
   position: relative;
   padding: 20px;
@@ -99,47 +7,13 @@
   align-items: center;
   color: #000000;
   overflow: hidden;
-  /* Cache le débordement des nuages */
   z-index: 1;
-  /* Assurez-vous que .header est au-dessus de .background-animation */
   background-color: rgba(7, 2, 1, 0.764);
-}
-.header .background-animation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  /* Deux fois la largeur pour deux images */
-  height: 100%;
-  display: flex;
-  z-index: -1;
-  /* Met les nuages en arrière-plan */
-}
-.header .background-animation .bg-layer {
-  width: 50%;
-  /* Chaque image prend la moitié de la largeur du conteneur */
-  height: 100%;
-  background: url(https://sebbrico.fr/upload_perso/fog_perso1.png) 20% 50%, url(https://sebbrico.fr/upload_perso/fog_perso2.png) 50% 50%, url(https://sebbrico.fr/upload_perso/fog_perso3.png) 10% 50%;
-  background-repeat: repeat-x;
-  background-size: contain;
-  /* Ajustez si nécessaire */
-  animation: bg 60s linear infinite;
-  /* Animation de 60 secondes pour une vitesse plus lente */
-}
-.header .b {
-  position: relative;
-  /* Assure que .b reste au-dessus de .background-animation */
-  z-index: 1;
-  /* .b au-dessus des nuages */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .header p {
   font-family: 'Dancing Script', cursive;
   color: aliceblue;
   position: relative;
-  /* Nécessaire pour le positionnement absolu du pseudo-élément */
   transition: color 0.3s ease, transform 0.3s ease;
 }
 .header p::after {
@@ -147,11 +21,9 @@
   position: absolute;
   left: 0;
   bottom: -2px;
-  /* Ajustez selon vos besoins */
   width: 100%;
   height: 2px;
-  /* Ajustez selon vos besoins */
-  background-color: #ffd499;
+  background-color: #fffffe;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -174,9 +46,15 @@
   transform: scale(1.3);
 }
 .header a:hover p {
-  color: #ffd499;
+  color: white;
   transform: translateY(7px);
 }
 .header a:hover p::after {
   transform: scaleX(1);
+}
+.selection {
+  color: #ffd499;
+}
+.selection p {
+  color: #ffd499;
 }

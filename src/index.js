@@ -8,6 +8,9 @@ import './Index.css'
 
 // pages
 import Home from './pages/Home/Home';
+import InflatableCastle from './pages/InflatableCastle/InflatableCastle';
+import InflatableGame from './pages/InflatableGame/InflatableGame';
+import RentalCondition from './pages/RentalCondition/RentalCondition';
 
 // layout
 import Header from './components/Layout/Header/Header';
@@ -20,11 +23,14 @@ root.render(
 
 
 
+      <Header />
       <div className="body">
-        <Header />
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Chateaux_Gonflabe" element={<InflatableCastle />} />
+          <Route path="/Jeux" element={<InflatableGame />} />
+          <Route path="/Contact_et_Devis" element={<RentalCondition />} />
           {/* <Route path="*" element={<Error />} /> */}
         </Routes>
         <div className='footerContainer'>
