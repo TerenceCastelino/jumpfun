@@ -1,13 +1,50 @@
 .cards-container {
+    width: 100%;
+  
+   .display{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Ajustez selon vos besoins, ex: center, flex-start, flex-end */
-    align-items: flex-start; /* Ajustez selon vos besoins, ex: center, flex-end */
-    margin: 10px;
-    
+    justify-content: space-around;
+   }
+
+   
+
+    .container-style(@linkBg,@justifyContent) {
+        background-image: url(@linkBg);
+        background-size: cover;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px;
+        justify-content: @justifyContent;
+        align-items: center;
+        // width: 100%;
+        border-bottom: 5px solid black;
+        border-top: 5px solid black;
+        margin-top: 70px;
+        margin-bottom: 30px;
+
+        h3 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #333; /* Couleur de texte ajustée */
+        }
+    }
+
+    .containerGirl {
+        
+        .container-style('C:/Users/teren/Desktop/funjumplocation/jumpfun/src/assets/images/fondCard/4994981.jpg', space-between);
+    }
+    .containerBoys {
+        .container-style('C:/Users/teren/Desktop/funjumplocation/jumpfun/src/assets/images/fondCard/580.jpg', space-between);
+    }
+    .containerMixte {
+        .container-style('C:/Users/teren/Desktop/funjumplocation/jumpfun/src/assets/images/fondCard/13104.jpg', center);
+    }
 }
 
 .card {
-    flex: 0 1 calc(33.333% - 20px); /* Trois éléments par ligne avec une marge de 20px */
+    flex: 0 1 calc(33.333% - 20px);
     margin: 10px;
 }
