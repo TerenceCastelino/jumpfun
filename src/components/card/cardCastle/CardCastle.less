@@ -1,105 +1,46 @@
-// @img-width: 500px;   // Largeur uniforme pour chaque carte
-// @img-height: 400px;  // Hauteur uniforme pour chaque carte
+@import '../../../utils/styles/colors.less';
 
-// .containerCard {
-//     border: 5px solid rgb(23, 16, 10);
-//     text-align: center;
-//     width: 510px;
-//     margin: 20px auto;
-//     box-shadow: 0 4px 8px rgba(0, 0, 0.4, 0.7);
-//     border-radius: 10px;
-//     background-color: #fff;
-//     overflow: hidden; // Ajouté pour s'assurer que l'effet de survol est bien visible
-//     transition: transform 0.3s ease, box-shadow 0.3s ease; // Transition pour le conteneur
-//     transition: background-color 7s ease, color 0.7s ease, border 3s ease; // Transition pour la description
-
-//     .img-container {
-//         width: @img-width;
-//         height: @img-height;
-//         overflow: hidden;
-//         background-color: #f0f0f0; // Arrière-plan pour uniformité
-
-//         img {
-           
-//             width: 100%;
-//             height: 100%;
-//             object-fit: cover; // Remplit le cadre sans étirer l'image
-           
-//             transition: transform 0.5s ease; // Transition pour l'image
-//         }
-//     }
-
-//     .description {
-//         border: 2px solid rgb(33, 28, 21);
-//         padding: 40px;
-//         transition: background-color 1s ease, color 0.7s ease, border 3s ease; // Transition pour la description
-
-//         h3 {
-//             font-size: 2.5em;
-//             font-weight: bold;
-//         }
-
-//         p {
-//             margin-top: 10px;
-//             font-size: 1em;
-//         }
-//     }
-
-//     // Effet de survol
-//     &:hover {
-//         border: 5px solid rgb(255, 212, 153);
-//         box-shadow: 0 8px 16px rgba(0, 0, 0.8, 1.4); // Ombre plus prononcée au survol
-//         transition: transform 1s ease;
-//         transform: scale(1.05); // Légère augmentation de la taille de l'image
-
-//         .img-container img {
-//             transform: scale(1.1); // Légère augmentation de la taille de l'image
-//         }
-
-//         .description {
-//             border: 2px solid rgb(255, 212, 153);
-//             background-color: rgba(7, 2, 1, 0.764);
-//             color: rgb(255, 212, 153);
-//         }
-//     }
-// }
-
-@img-width: 500px;   // Largeur uniforme pour chaque carte
-@img-height: 400px;  // Hauteur uniforme pour chaque carte
+@img-width: 400px;   // Largeur uniforme pour chaque carte
+@img-height: 200px;  // Hauteur uniforme pour chaque carte
+@tTransition : 0.5s ease;
 
 .containerCard {
-    border: 5px solid rgb(23, 16, 10);
+    border: 5px solid @primary;
     text-align: center;
-    width: 510px;
+    width: 30%;
+    height: 60%;
+  
     margin: 20px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
+    border-radius: 10% 2%  10% 2%;
     background-color: #fff;
     overflow: hidden;
-    transition: transform 0.6s ease, box-shadow 0.6s ease; // Transition plus longue pour des transitions douces
+    transition: transform @tTransition, box-shadow @tTransition; // Transition pour des transitions douces
 
     .img-container {
         width: @img-width;
         height: @img-height;
         overflow: hidden;
-        background-color: #f0f0f0;
+        background-color: @background-light; // Utilisation d'une couleur de fond légère
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s ease; // Transition pour l'image
+            transition: transform @tTransition; // Transition pour l'image
         }
     }
 
     .description {
-        border: 2px solid rgb(33, 28, 21);
+        border: 2px solid @primary; // Utilisation de la couleur de bordure définie
         padding: 40px;
-        transition: background-color 1s ease, color 0.7s ease, border 3s ease;
-
+        transition: background-color @tTransition, color @tTransition, border @tTransition;
+        height: 250px;
         h3 {
             font-size: 2.5em;
             font-weight: bold;
+            color: @text-color-dark; // Utilisation de la couleur de texte sombre
+            margin-bottom: 30px;
         }
 
         p {
@@ -109,19 +50,26 @@
     }
 
     &:hover {
-        border: 5px solid rgb(255, 212, 153);
+        border: 5px solid @accent; // Utilisation de la couleur d'accent lors du survol
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
         transform: scale(1.05);
-        transition: transform 0.8s ease, box-shadow 0.8s ease;
+        transition: transform @tTransition, box-shadow @tTransition,border @tTransition;
 
         .img-container img {
             transform: scale(1.1);
         }
 
         .description {
-            border: 2px solid rgb(255, 212, 153);
+            border: 2px solid @accent; // Utilisation de la couleur d'accent pour la bordure
             background-color: rgba(7, 2, 1, 0.764);
-            color: rgb(255, 212, 153);
+            color: @accent; // Utilisation de la couleur d'accent pour le texte
+            transition: transform @tTransition,border @tTransition,background-color @tTransition;
+            h3 {
+                
+                font-weight: 900;
+                color: @accent ; // Utilisation de la couleur de texte sombre
+                
+            }
         }
     }
 }

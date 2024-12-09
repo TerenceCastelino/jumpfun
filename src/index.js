@@ -11,6 +11,7 @@ import Home from './pages/Home/Home';
 import InflatableCastle from './pages/InflatableCastle/InflatableCastle';
 import InflatableGame from './pages/InflatableGame/InflatableGame';
 import RentalCondition from './pages/RentalCondition/RentalCondition';
+import CastleDetail from './pages/CastleDetail/CastleDetail';
 
 // layout
 import Header from './components/Layout/Header/Header';
@@ -29,6 +30,7 @@ root.render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Chateaux_Gonflabe" element={<InflatableCastle />} />
+          <Route path="/Chateaux_Gonflable/:id" element={<CastleDetail />} /> {/* Nouvelle route */}
           <Route path="/Jeux" element={<InflatableGame />} />
           <Route path="/Contact_et_Devis" element={<RentalCondition />} />
           {/* <Route path="*" element={<Error />} /> */}

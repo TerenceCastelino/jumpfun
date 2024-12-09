@@ -1,6 +1,12 @@
 .containerHome {
-  background-color: #f3e4bc;
-  height: 100vh;
+  background-color: #342e25;
+  min-height: 100vh;
+}
+.containerHome .a {
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+  margin-top: 3vw;
 }
 .headerTitleContainer {
   position: relative;
@@ -24,7 +30,7 @@
   width: 100%;
   box-sizing: border-box;
   /* Inclure les bordures dans les dimensions */
-  border: 10px solid black;
+  border: 4px solid #ffd499;
   animation: moveBackground 30s infinite alternate;
 }
 .headerTitleContainer .titleContainer {
@@ -64,6 +70,95 @@
   border-radius: 50%;
   box-sizing: border-box;
   /* Inclure les bordures dans les dimensions */
+}
+.descriptionContainer {
+  border: 2px solid black;
+  width: 45%;
+  background: #ffd499;
+}
+.descriptionContainer .titleDescription {
+  text-align: center;
+  margin: 2vw ;
+  font-size: 2rem;
+}
+.descriptionContainer .descriptionTexteImgContainer {
+  display: flex;
+  padding: 2vw;
+  background-color: white;
+  color: #333;
+  backdrop-filter: blur(1.5px);
+  border-radius: 50px;
+}
+.descriptionContainer .descriptionTexteImgContainer .texteDescription {
+  height: 100%;
+  width: 30%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.descriptionContainer .descriptionTexteImgContainer .texteDescription p {
+  margin: 1.5vw 25%;
+  width: 50%;
+  text-align: left;
+  font-size: 1rem;
+}
+.descriptionContainer .descriptionTexteImgContainer .texteDescription button {
+  width: 50%;
+  height: 3vw;
+  text-align: center;
+  margin: 1.5vw 25%;
+  background-color: #74ba74;
+}
+.descriptionContainer .descriptionTexteImgContainer .imgHomeContainer {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.descriptionContainer .descriptionTexteImgContainer .imgHomeContainer img {
+  width: 100%;
+}
+.valueContainer {
+  width: 45%;
+  text-align: center;
+  background: #ffd499;
+}
+.valueContainer .valeurTitle {
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+  padding: 2vw;
+}
+.valueContainer .value {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 30px;
+  background: #ffffff;
+}
+.valueContainer .value .valueSide {
+  background: #ffffff;
+  width: 31%;
+  border: 2px solid black;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  padding: 1vw;
+  text-align: left;
+}
+.valueContainer .value .valueSide h3 {
+  margin: 2vw 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.valueContainer .value .valueSide p {
+  height: 35%;
+}
+.valueContainer .value .valueSide img {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid black;
+  margin-top: 2vw;
 }
 @keyframes moveBackground {
   0% {

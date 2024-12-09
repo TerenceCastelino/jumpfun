@@ -1,14 +1,14 @@
+@import '../../utils//styles/colors.less';
+
 .cards-container {
     width: 100%;
-  
-   .display{
-    display: flex;
-    justify-content: space-around;
-   }
 
-   
+    .display {
+        display: flex;
+        justify-content: space-around;
+    }
 
-    .container-style(@linkBg,@justifyContent) {
+    .container-style(@linkBg, @justifyContent) {
         background-image: url(@linkBg);
         background-size: cover;
         display: flex;
@@ -16,9 +16,8 @@
         padding: 30px;
         justify-content: @justifyContent;
         align-items: center;
-        // width: 100%;
-        border-bottom: 5px solid black;
-        border-top: 5px solid black;
+        border-bottom: 5px solid @primary; /* Utilisation de la couleur principale pour la bordure */
+        border-top: 5px solid @primary; /* Utilisation de la couleur principale pour la bordure */
         margin-top: 70px;
         margin-bottom: 30px;
 
@@ -28,17 +27,18 @@
             margin-bottom: 15px;
             font-size: 3rem;
             font-weight: 700;
-            color: #333; /* Couleur de texte ajustée */
+            color: @text-color-dark; /* Utilisation de la couleur de texte sombre */
         }
     }
 
     .containerGirl {
-        
         .container-style('C:/Users/teren/Desktop/funjumplocation/jumpfun/src/assets/images/fondCard/4994981.jpg', space-between);
     }
+    
     .containerBoys {
         .container-style('C:/Users/teren/Desktop/funjumplocation/jumpfun/src/assets/images/fondCard/580.jpg', space-between);
     }
+    
     .containerMixte {
         .container-style('C:/Users/teren/Desktop/funjumplocation/jumpfun/src/assets/images/fondCard/13104.jpg', center);
     }
@@ -47,4 +47,69 @@
 .card {
     flex: 0 1 calc(33.333% - 20px);
     margin: 10px;
+    border: 2px solid @accent; /* Ajout d'une bordure avec la couleur d'accent */
+    border-radius: 10px; /* Arrondir les coins des cartes */
+    transition: transform 0.3s ease; /* Ajout d'une transition pour l'effet de survol */
+
+    &:hover {
+        transform: scale(1.05); /* Effet de survol pour agrandir légèrement la carte */
+    }
+}
+
+.introductionContainer{
+    width: 90%;
+    // border: 3px solid @accent;
+    margin: 100px auto  ;
+    padding: 2vw;
+    background-color:@witheTransparent;
+    color:@primary;
+    backdrop-filter: blur(1.5px);
+    border-radius: 50px;
+
+    .introduction{
+        padding: 1vw;
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 1vw;
+        }
+        p{
+            margin-bottom: 1vw;
+            font-size: 1.2rem;
+        }
+
+    }
+}
+.choisContainer {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.anchor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anchor:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.anchor span {
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour le texte */
+    padding: 10px 100px;
+    border-radius: 5px;
 }

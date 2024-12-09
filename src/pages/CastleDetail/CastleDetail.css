@@ -1,0 +1,134 @@
+.castle-detail {
+  width: 100%;
+  height: 1000px;
+}
+.castle-detail button {
+  margin: 5% 0 0 5%;
+  background-color: rgba(7, 2, 1, 0.764);
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 1rem;
+  color: #ffd499;
+  font-size: 1rem;
+}
+.castle-detail .flexContainer {
+  margin: 1% 5% 5px 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.castle-detail .flexContainer .image-container {
+  border-radius: 15%;
+  position: relative;
+  text-align: center;
+  width: 60%;
+  height: 800px;
+}
+.castle-detail .flexContainer .image-container img {
+  width: 100%;
+  height: 100%;
+  border: 8px solid #ffd499;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.castle-detail .flexContainer .image-container .prev-button,
+.castle-detail .flexContainer .image-container .next-button {
+  position: absolute;
+  top: 50%;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  height: 5rem;
+  width: 5rem;
+  opacity: 0.7;
+}
+.castle-detail .flexContainer .image-container .prev-button {
+  left: 5%;
+  transform: rotate(180deg);
+}
+.castle-detail .flexContainer .image-container .next-button {
+  right: 5%;
+}
+.castle-detail .flexContainer .image-container .image-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.castle-detail .flexContainer .image-container .image-indicators .indicator {
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  background-color: rgba(255, 212, 153, 0.7);
+  margin: 0 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.castle-detail .flexContainer .image-container .image-indicators .indicator.active {
+  background-color: #ffd499;
+  opacity: 1;
+  transform: scale(1.7);
+}
+.castle-detail .flexContainer .details {
+  border: 8px solid #ffd499;
+  background-color: #f3efefb9;
+  color: #333;
+  backdrop-filter: blur(1.5px);
+  width: 30%;
+  height: auto;
+  border-radius: 5%;
+}
+.castle-detail .flexContainer .details .dimensions,
+.castle-detail .flexContainer .details .detailed-description {
+  padding: 10px;
+}
+.castle-detail .flexContainer .details .dimensions h2,
+.castle-detail .flexContainer .details .detailed-description h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  padding: 1vw;
+}
+.castle-detail .flexContainer .details .dimensions h3,
+.castle-detail .flexContainer .details .detailed-description h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 1vw;
+  padding: 1vw;
+}
+.castle-detail .flexContainer .details .dimensions p,
+.castle-detail .flexContainer .details .detailed-description p {
+  font-size: 1.2rem;
+}
+.castle-detail .flexContainer .details .dimensions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* Centrer les items verticalement */
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+.castle-detail .flexContainer .details .dimensions img {
+  display: block;
+  margin: 0 auto;
+  /* Centrer horizontalement */
+  height: 2vw;
+  width: 2vw;
+}
+.castle-detail .flexContainer .details .dimensions .largeur img {
+  transform: rotate(45deg);
+}
+.castle-detail .flexContainer .details .dimensions .longueur img {
+  transform: rotate(90deg);
+}
+.castle-detail .flexContainer .details .dimensions p {
+  margin-left: 10px;
+  /* Espacement entre l'image et le texte */
+}

@@ -13,8 +13,10 @@
   padding: 30px;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 5px solid black;
-  border-top: 5px solid black;
+  border-bottom: 5px solid #333;
+  /* Utilisation de la couleur principale pour la bordure */
+  border-top: 5px solid #333;
+  /* Utilisation de la couleur principale pour la bordure */
   margin-top: 70px;
   margin-bottom: 30px;
 }
@@ -25,7 +27,7 @@
   font-size: 3rem;
   font-weight: 700;
   color: #333;
-  /* Couleur de texte ajustée */
+  /* Utilisation de la couleur de texte sombre */
 }
 .cards-container .containerBoys {
   background-image: url('C:/Users/teren/Desktop/funjumplocation/jumpfun/src/assets/images/fondCard/580.jpg');
@@ -35,8 +37,10 @@
   padding: 30px;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 5px solid black;
-  border-top: 5px solid black;
+  border-bottom: 5px solid #333;
+  /* Utilisation de la couleur principale pour la bordure */
+  border-top: 5px solid #333;
+  /* Utilisation de la couleur principale pour la bordure */
   margin-top: 70px;
   margin-bottom: 30px;
 }
@@ -47,7 +51,7 @@
   font-size: 3rem;
   font-weight: 700;
   color: #333;
-  /* Couleur de texte ajustée */
+  /* Utilisation de la couleur de texte sombre */
 }
 .cards-container .containerMixte {
   background-image: url('C:/Users/teren/Desktop/funjumplocation/jumpfun/src/assets/images/fondCard/13104.jpg');
@@ -57,8 +61,10 @@
   padding: 30px;
   justify-content: center;
   align-items: center;
-  border-bottom: 5px solid black;
-  border-top: 5px solid black;
+  border-bottom: 5px solid #333;
+  /* Utilisation de la couleur principale pour la bordure */
+  border-top: 5px solid #333;
+  /* Utilisation de la couleur principale pour la bordure */
   margin-top: 70px;
   margin-bottom: 30px;
 }
@@ -69,9 +75,70 @@
   font-size: 3rem;
   font-weight: 700;
   color: #333;
-  /* Couleur de texte ajustée */
+  /* Utilisation de la couleur de texte sombre */
 }
 .card {
   flex: 0 1 calc(33.333% - 20px);
   margin: 10px;
+  border: 2px solid #ffd499;
+  /* Ajout d'une bordure avec la couleur d'accent */
+  border-radius: 10px;
+  /* Arrondir les coins des cartes */
+  transition: transform 0.3s ease;
+  /* Ajout d'une transition pour l'effet de survol */
+}
+.card:hover {
+  transform: scale(1.05);
+  /* Effet de survol pour agrandir légèrement la carte */
+}
+.introductionContainer {
+  width: 90%;
+  margin: 100px auto  ;
+  padding: 2vw;
+  background-color: #f3efefb9;
+  color: #333;
+  backdrop-filter: blur(1.5px);
+  border-radius: 50px;
+}
+.introductionContainer .introduction {
+  padding: 1vw;
+}
+.introductionContainer .introduction h2 {
+  font-size: 3rem;
+  margin-bottom: 1vw;
+}
+.introductionContainer .introduction p {
+  margin-bottom: 1vw;
+  font-size: 1.2rem;
+}
+.choisContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+.anchor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.anchor:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.anchor span {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fond semi-transparent pour le texte */
+  padding: 10px 100px;
+  border-radius: 5px;
 }

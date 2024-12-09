@@ -3,29 +3,26 @@
   width: 100%;
   background-repeat: no-repeat;
   border: 10px solid #ffd499;
-  border-radius: 0 0 20% 20% ;
+  /* Utilisation de la couleur d'accent */
+  border-radius: 0 0 20% 20%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background: #160801d5;
+  background: rgba(22, 8, 1, 0.84);
+  /* Utilisation de la couleur de fond sombre */
 }
-.containerStyle .descriptif,
-.containerStyle img {
+.containerStyle .descriptif {
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #ffd499;
-}
-.containerStyle img {
-  height: 90%;
-  width: 30%;
-  margin: auto;
-  border-radius: 20% 0 20% 0;
-  border: #ffd499 2px solid;
+  /* Utilisation de la couleur d'accent pour le texte */
 }
 .containerStyle h1 {
   font-size: 5rem;
+  color: #ffd499;
+  /* Utilisation de la couleur de texte sombre pour le titre */
 }
 .containerStyle .descriptif {
   display: flex;

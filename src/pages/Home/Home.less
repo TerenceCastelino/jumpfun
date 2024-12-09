@@ -1,6 +1,15 @@
+@import '../../utils/styles/colors.less';
+
 .containerHome {
-    background-color: rgb(243, 228, 188);
-    height: 100vh;
+    background-color: rgb(52, 46, 37);
+    min-height: 100vh;
+
+    .a{
+      display: flex;
+      justify-content: center;
+      gap: 5vw;
+      margin-top: 3vw;
+    }
   }
   
   .headerTitleContainer {
@@ -24,7 +33,7 @@
       height: 100%; /* Utiliser 100% pour correspondre à la hauteur du conteneur parent */
       width: 100%;
       box-sizing: border-box; /* Inclure les bordures dans les dimensions */
-      border: 10px solid black;
+      border: 4px solid @accent;
       animation: moveBackground 30s infinite alternate;
     }
   
@@ -64,6 +73,120 @@
       width: auto;
       border-radius: 50%;
       box-sizing: border-box; /* Inclure les bordures dans les dimensions */
+    }
+  }
+  .descriptionContainer{
+    border: 2px solid black;
+    // margin: 4vw 20vw ;
+    width: 45%;
+    background:@accent;
+
+    .titleDescription{
+      text-align: center;
+      margin: 2vw ;
+      font-size: 2rem;
+    }
+    .descriptionTexteImgContainer{
+      display: flex;
+      padding: 2vw;
+      
+    background-color:white;
+    color:@primary;
+    backdrop-filter: blur(1.5px);
+    border-radius: 50px;
+     
+
+      .texteDescription{
+          // border: 2px solid rgb(166, 40, 40);
+          height: 100%;
+          width: 30%;
+          display: block;
+          justify-content: center;
+          align-items: center;
+          p{
+            margin:1.5vw 25%;
+            // border: 1px solid black;
+            width:50%;
+            text-align: left;
+            font-size: 1rem;
+
+          }
+          button{
+            width:50%;
+            height: 3vw;
+            text-align: center;
+            margin:1.5vw 25%;
+            background-color: rgb(116, 186, 116);
+          }
+        
+      }
+      .imgHomeContainer{
+        width: 70%;
+        // border: black solid 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+          width: 100%;
+        }
+      }
+    }
+    
+  }
+
+  .valueContainer{
+    // margin: 4vw 20vw ;
+    width: 45%;
+    
+    text-align: center;
+    background:@accent;
+   
+
+    .valeurTitle{
+
+      text-align: center;
+      width: 100%;
+      
+      font-size: 2rem;
+      
+      padding: 2vw;
+
+    }
+
+    .value{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      border-radius: 30px;
+      background: rgb(255, 255, 255);
+      
+      
+      .valueSide{
+        background: rgb(255, 255, 255);
+        width: 31%;
+        border: 2px solid black;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        padding: 1vw;
+        text-align: left;
+
+        h3{
+          margin: 2vw 0;
+          font-size: 1.5rem;
+          text-align: center;
+        }
+        p{
+          height: 35%;
+        }
+        img{
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          border: 1px solid black;
+          margin-top: 2vw;
+        }
+      }
     }
   }
   

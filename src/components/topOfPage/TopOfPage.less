@@ -1,43 +1,42 @@
-  .containerStyle{
+@import '../../utils//styles/colors.less';
+
+.containerStyle {
     height: 250px;
     width: 100%;
-    // background-size: 300px 300px;
     background-repeat: no-repeat;
-    border: 10px solid rgb(255, 212, 153);
-    border-radius:0 0 20% 20% ;
+    border: 10px solid @accent; /* Utilisation de la couleur d'accent */
+    border-radius: 0 0 20% 20%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background: #160801d5;
+    background: @background-dark; /* Utilisation de la couleur de fond sombre */
 
-    
-    .descriptif, img{
-        
+    .descriptif{
         width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: rgb(255, 212, 153);
-       
+        color: @accent; /* Utilisation de la couleur d'accent pour le texte */
+    }
 
-    }
-    img{
-       height: 90%;
-      width: 30%;
-       margin: auto;
-       border-radius: 20% 0 20% 0;
-       border: rgb(255, 212, 153) 2px solid;
-    }
-    h1{
-        
+    // img {
+    //     height: 90%;
+    //     width: 30%;
+    //     margin: auto;
+    //     border-radius: 20% 0 20% 0;
+    //     border: @accent 2px solid; /* Utilisation de la couleur d'accent pour la bordure de l'image */
+    // }
+
+    h1 {
         font-size: 5rem;
+        color: @accent; /* Utilisation de la couleur de texte sombre pour le titre */
     }
-    .descriptif{
-        
+
+    .descriptif {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         border-radius: 0 0 0 30%;
     }
-  }
+}

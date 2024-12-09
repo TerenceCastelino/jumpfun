@@ -1,0 +1,42 @@
+.cardRedirectionLink {
+  text-decoration: none;
+  /* Remove underline from link */
+  color: inherit;
+  /* Inherit text color */
+}
+.cardRedirectionContainer {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  /* Add pointer cursor to indicate clickable area */
+  border: 2px solid black;
+  margin: 4vw 20vw ;
+  background: #ffd499;
+}
+.cardRedirectionContainer .titleCard {
+  text-align: center;
+  font-size: 3rem;
+  background: #ffd499;
+  padding: 1vw;
+}
+.cardRedirectionContainer .cardPresentation {
+  border-radius: 30px;
+  background: #fbf9f9;
+  display: flex;
+  padding: 2vw;
+  justify-content: space-around;
+  align-items: center;
+}
+.cardRedirectionContainer .cardPresentation p {
+  text-align: left;
+  font-size: 1.5rem;
+  margin: 2vw;
+}
+.cardRedirectionContainer .cardPresentation img {
+  height: 17vw;
+  border: 5px solid black;
+  padding: 2vw;
+}
+.cardRedirectionContainer:hover {
+  transform: scale(1.05);
+  /* Scale up the component slightly */
+}
