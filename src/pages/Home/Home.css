@@ -4,15 +4,12 @@
 }
 .containerHome .a {
   display: flex;
-  justify-content: center;
-  gap: 5vw;
-  margin-top: 3vw;
 }
 .headerTitleContainer {
   position: relative;
   display: flex;
   width: 100%;
-  height: 400px;
+  height: 70%;
   background-image: url('../../assets/images/imageFond/fondRR.jpg');
   background-size: cover;
   justify-content: space-around;
@@ -73,7 +70,7 @@
 }
 .descriptionContainer {
   border: 2px solid black;
-  width: 45%;
+  margin: 4vw 20vw ;
   background: #ffd499;
 }
 .descriptionContainer .titleDescription {
@@ -91,26 +88,19 @@
 }
 .descriptionContainer .descriptionTexteImgContainer .texteDescription {
   height: 100%;
-  width: 30%;
+  width: 40%;
   display: block;
   justify-content: center;
   align-items: center;
 }
 .descriptionContainer .descriptionTexteImgContainer .texteDescription p {
-  margin: 1.5vw 25%;
-  width: 50%;
+  margin: 1.5vw 2%;
   text-align: left;
   font-size: 1rem;
-}
-.descriptionContainer .descriptionTexteImgContainer .texteDescription button {
-  width: 50%;
-  height: 3vw;
-  text-align: center;
-  margin: 1.5vw 25%;
-  background-color: #74ba74;
+  padding: 1vw;
 }
 .descriptionContainer .descriptionTexteImgContainer .imgHomeContainer {
-  width: 70%;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,7 +109,7 @@
   width: 100%;
 }
 .valueContainer {
-  width: 45%;
+  margin: 4vw 20vw ;
   text-align: center;
   background: #ffd499;
 }
@@ -191,5 +181,72 @@
   }
   100% {
     background-position: center;
+  }
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  .containerHome {
+    padding: 0 5vw;
+  }
+  .headerTitleContainer {
+    height: 300px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .styleLogo {
+    height: 70%;
+  }
+  .descriptionContainer {
+    margin: 2vw 5vw;
+    padding: 2vw;
+  }
+  .titleDescription {
+    font-size: 1.5rem;
+  }
+  .descriptionTexteImgContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+  .descriptionTexteImgContainer .texteDescription {
+    width: 100%;
+    text-align: center;
+    margin: 1.5vw 0;
+  }
+  .descriptionTexteImgContainer .imgHomeContainer {
+    width: 100%;
+  }
+  .valueContainer {
+    margin: 2vw 5vw;
+  }
+  .value {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+@media (max-width: 480px) {
+  .containerHome {
+    padding: 0 2vw;
+  }
+  .headerTitleContainer {
+    height: 250px;
+    flex-direction: column;
+  }
+  .styleLogo {
+    height: 60%;
+  }
+  .descriptionContainer {
+    margin: 2vw 3vw;
+    padding: 1.5vw;
+  }
+  .valueContainer {
+    margin: 2vw 3vw;
+  }
+  .value {
+    flex-direction: column;
+    padding: 1vw 0;
+  }
+  .descriptionTexteImgContainer .texteDescription {
+    width: 100%;
+    margin: 1.5vw 0;
   }
 }

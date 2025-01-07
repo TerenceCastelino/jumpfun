@@ -5,6 +5,8 @@ import logoCastleLogo from '../../../assets/images/logos/iconBouncyCastle/bouncy
 import jeuxGonflabe from '../../../assets/images/logos/iconGame/puzzleWhite.png';
 import acceuilLogo from '../../../assets/images/logos/iconHome/clean-houseWhite.png';
 import conctactUsLogo from '../../../assets/images/logos/iconContact/mailboxWhite.png';
+import facebook from '../../../assets/images/logosReseaux/logosFacebook/facebook (2).png'
+import instagram from '../../../assets/images/logosReseaux/LogosInstagram/instagram.png'
 
 // Importez les logos pour l'état de survol
 import logoCastleHover from '../../../assets/images/logos/iconBouncyCastle/bouncy-castleGold.png';
@@ -29,6 +31,24 @@ function Header() {
     };
 
     return (
+        <div>
+            <div className="stripContact">
+    <a href="tel:+33123456789" className="phoneNumber">+33 1 23 45 67 89</a>
+    <div className="socialIcons">
+        <a href="https://www.facebook.com/search/top?q=youpla%20boum&locale=fr_FR" target="_blank" rel="noopener noreferrer">
+            <img src={facebook} alt="Facebook" />
+        </a>
+        <a href="https://www.facebook.com/search/top?q=youpla%20boum&locale=fr_FR" target="_blank" rel="noopener noreferrer">
+            <img src={instagram} alt="Instagram" />
+        </a>
+    </div>
+</div>
+
+            {/* <div className='stripContact'>
+                <a href="https://www.facebook.com/search/top?q=youpla%20boum&locale=fr_FR" target="_blank" rel="noopener noreferrer"><img src={facebook} alt="" /></a>
+                <a href="https://www.facebook.com/search/top?q=youpla%20boum&locale=fr_FR" target="_blank" rel="noopener noreferrer"><img src={instagram} alt="" /></a>
+                <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+            </div> */}
         <div className="header">
             <Link 
                 to="/" 
@@ -74,6 +94,7 @@ function Header() {
                     <p>Contact & Devis</p>
                 </div>
             </Link>
+        </div>
         </div>
     );
 }

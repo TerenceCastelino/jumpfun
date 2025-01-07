@@ -4,11 +4,10 @@
     background-color: rgb(52, 46, 37);
     min-height: 100vh;
 
+    
+
     .a{
       display: flex;
-      justify-content: center;
-      gap: 5vw;
-      margin-top: 3vw;
     }
   }
   
@@ -16,7 +15,7 @@
     position: relative;
     display: flex;
     width: 100%;
-    height: 400px;
+    height: 70%;
     // border: 10px solid rgba(31, 31, 31, 0.585);
     background-image: url('../../assets/images/imageFond/fondRR.jpg');
     background-size: cover;
@@ -77,8 +76,7 @@
   }
   .descriptionContainer{
     border: 2px solid black;
-    // margin: 4vw 20vw ;
-    width: 45%;
+    margin: 4vw 20vw ;
     background:@accent;
 
     .titleDescription{
@@ -97,31 +95,25 @@
      
 
       .texteDescription{
-          // border: 2px solid rgb(166, 40, 40);
           height: 100%;
-          width: 30%;
+          width: 40%;
           display: block;
           justify-content: center;
           align-items: center;
+
           p{
-            margin:1.5vw 25%;
-            // border: 1px solid black;
-            width:50%;
+            margin:1.5vw 2%;            
             text-align: left;
             font-size: 1rem;
+            // border: 1px solid black;
+            padding: 1vw;
 
           }
-          button{
-            width:50%;
-            height: 3vw;
-            text-align: center;
-            margin:1.5vw 25%;
-            background-color: rgb(116, 186, 116);
-          }
+          
         
       }
       .imgHomeContainer{
-        width: 70%;
+        width: 60%;
         // border: black solid 2px;
         display: flex;
         justify-content: center;
@@ -136,8 +128,7 @@
   }
 
   .valueContainer{
-    // margin: 4vw 20vw ;
-    width: 45%;
+    margin: 4vw 20vw ;
     
     text-align: center;
     background:@accent;
@@ -232,3 +223,93 @@
       
     }
   }
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .containerHome {
+    padding: 0 5vw;
+  }
+
+  .headerTitleContainer {
+    height: 300px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .styleLogo {
+    height: 70%;
+  }
+
+  .descriptionContainer {
+    margin: 2vw 5vw;
+    padding: 2vw;
+  }
+
+  .titleDescription {
+    font-size: 1.5rem;
+  }
+
+  .descriptionTexteImgContainer {
+    flex-direction: column;
+    width: 100%;
+
+    .texteDescription {
+      width: 100%;
+      text-align: center;
+      margin: 1.5vw 0;
+    }
+
+    .imgHomeContainer {
+      width: 100%;
+    }
+  }
+
+  .valueContainer {
+    margin: 2vw 5vw;
+  }
+
+  .value {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .containerHome {
+    padding: 0 2vw;
+  }
+
+  .headerTitleContainer {
+    height: 250px;
+    flex-direction: column;
+  }
+
+  
+
+  .styleLogo {
+    height: 60%;
+  }
+
+  .descriptionContainer {
+    margin: 2vw 3vw;
+    padding: 1.5vw;
+  }
+
+  .valueContainer {
+    margin: 2vw 3vw;
+  }
+
+  .value {
+    flex-direction: column;
+    padding: 1vw 0;
+  }
+
+  .descriptionTexteImgContainer {
+    .texteDescription {
+      width: 100%;
+      margin: 1.5vw 0;
+    }
+  }
+}

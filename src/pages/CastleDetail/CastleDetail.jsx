@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import castelData from '../../datas/castelData/castelData';
 import TopOfPage from '../../components/topOfPage/TopOfPage';
+import ReusableButton from '../../components/reusableButton/ReusableButton';
 
 import btnImages from '../../assets/images/right-arrow.png'
 import heightImages from '../../assets/images/height.png'
@@ -10,8 +11,8 @@ import './CastleDetail.css';
 
 function CastleDetail() {
   const { id } = useParams();
-  const navigate = useNavigate();
-  const castle = castelData.find(castle => castle.id == id);
+ const idParse =  parseInt(id)
+  const castle = castelData.find(castle => castle.id === idParse);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   if (!castle) {
@@ -48,8 +49,10 @@ function CastleDetail() {
 
       <div className="castle-detail">
 
+      <div className='back'>
+      <ReusableButton text="Retour au chateaux gonflable" link="/Chateaux_Gonflabe" />
 
-        <button onClick={() => navigate(-1)}>Retour vers les chateaux gonflabe</button> {/* Lien pour retourner en arrière */}
+      </div>
         <div className='flexContainer'>
 
             <div className="image-container">
@@ -80,32 +83,41 @@ function CastleDetail() {
               
               
               <div className="detailed-description">
+
                 <h2>{castle.name}</h2>
 
                 <div className="dimensions">
-                <div className='hauteur'>
+
+                  <div className='hauteur'>
 
                     <img src={heightImages} alt="hauteur" />
                     <p>{castle.hauteur}</p>
 
-                </div>
-                <div className='largeur'>
+                  </div>
+                
+                  <div className='largeur'>
 
                     <img src={heightImages}  alt="largeur" />
                     <p>{castle.largeur}</p>
 
-                </div>
-                <div className='longueur'>
+                  </div>
+
+                  <div className='longueur'>
 
                     <img src={heightImages}  alt="longueur" />
                     <p>{castle.longeur}</p>
 
-                </div>
-              </div>
+                  </div>
 
-                <h3>Description détaillée</h3>
-                <p>{castle.description}</p>
-                <button>Contacte</button>
+                </div>
+                
+                <div className='detailedDescription'>
+                  
+                  <h3>Description détaillée</h3>
+                  <p>{castle.description}</p>
+                  <ReusableButton text="Contactez nous" link="/Contact_et_Devis" />
+                </div>    
+
               </div>
             </div>
 

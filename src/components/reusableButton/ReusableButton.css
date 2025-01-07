@@ -1,0 +1,23 @@
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vw;
+}
+.reusableButton {
+  background-color: #333 !important;
+  color: aliceblue;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  width: 80%;
+  height: 3vw;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+.reusableButton:hover {
+  background-color: #ffd499;
+  color: #ffd499;
+  transform: scale(1.1);
+  border: 2px solid #ffd499;
+}

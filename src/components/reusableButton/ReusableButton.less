@@ -1,0 +1,29 @@
+@import '../../utils/styles/colors.less';
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vw;
+ }
+
+.reusableButton {
+
+  background-color: @primary !important;        // Couleur principale pour le fond
+  color: @secondary;                            // Texte clair
+  
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  width:80%;
+  height: 3vw;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: @accent;                 // Accent sur le fond au survol
+    color: @accent;                            // Texte sombre au survol
+    transform: scale(1.1);                     // Effet de zoom
+    border: 2px solid @accent;                    // Bordure d'accent
+  }
+}

@@ -1,3 +1,41 @@
+.stripContact {
+  display: flex;
+  justify-content: space-between;
+  /* Sépare le numéro et les icônes */
+  align-items: center;
+  padding: 0.4vw;
+  border: 2px solid #ffd499;
+}
+.stripContact .phoneNumber {
+  margin-left: 2vw;
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.stripContact .phoneNumber:hover {
+  color: darkorange;
+  /* Change la couleur au survol */
+  transform: scale(1.2);
+  /* Ajoute un léger agrandissement */
+}
+.stripContact .socialIcons {
+  display: flex;
+  gap: 1vw;
+  /* Ajoute un espace entre les icônes */
+  margin-right: 2vw;
+}
+.stripContact .socialIcons a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.stripContact .socialIcons a:hover {
+  transform: scale(1.3);
+  /* Ajoute un léger agrandissement au survol */
+}
+.stripContact .socialIcons a img {
+  height: 2vw;
+}
 .header {
   position: relative;
   padding: 20px;

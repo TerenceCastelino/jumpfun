@@ -7,6 +7,7 @@ function RentalCondition(props) {
     return (
         <div>
              <TopOfPage src={logoCastleLogo} alt="Placeholder Image" title='Contacte & Devis' message={'Prenons contacte afin détablir un devis'}  />
+             
         </div>
     );
 }

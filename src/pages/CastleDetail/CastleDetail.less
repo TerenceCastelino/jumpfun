@@ -2,16 +2,16 @@
 
 .castle-detail {
     width: 100%;
-    height: 1000px;
+    height:100%;
 
-    button {
-        margin: 5% 0 0 5%;
-        background-color: @background-header;
-        border: 1px solid black;
-        padding: 10px;
-        border-radius: 1rem;
-        color: @accent;
-        font-size: 1rem;
+    .back{
+        width: 50%;
+        button{
+            &:hover {
+                                   // Texte sombre au survol
+                transform: scale(1.03);                     // Effet de zoom
+              }  
+        }
     }
     
     .flexContainer {
@@ -24,7 +24,7 @@
             position: relative;
             text-align: center;
             width: 60%;
-            height: 800px;
+            height: 80vh;
 
             img {
                 width: 100%;
@@ -92,8 +92,9 @@
             color: @primary;
             backdrop-filter: blur(1.5px);
             width: 30%;
-            height: auto;
+            height: 80vh;
             border-radius: 5%;
+            height: 100%;
     
             .dimensions,
             .detailed-description {
@@ -103,7 +104,7 @@
                 h2 {
                     display: flex;
                     justify-content: center;
-                    font-size: 4rem;
+                    font-size: 3rem;
                     padding: 1vw;
                 }
 
@@ -111,15 +112,28 @@
                    
                     display: flex;
                     justify-content: center;
-                    font-size: 2.5rem;
+                    font-size: 2rem;
                     margin-bottom: 1vw;
                     padding: 1vw;
+                    
                 }
         
                 p { 
-                    font-size: 1.2rem;
+                    display: flex;
+                    justify-content: center;
+                    width: 80%;
+                    margin: 0 10%;
+                    font-size: 0.9rem;
+                    
+                    padding: 1vw;
                     
                 }
+                .detailedDescription{
+
+                }
+
+                
+                
             }
 // 17juin 1952
             .dimensions {

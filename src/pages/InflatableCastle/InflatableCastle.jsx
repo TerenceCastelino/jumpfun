@@ -36,7 +36,7 @@ function InflatableCastle() {
                     Chez Youplaboum, la sécurité est primordiale. Tous nos châteaux sont certifiés et inspectés par Vincotte pour garantir des heures de jeu en toute tranquillité. Chaque location comprend une soufflerie et une bâche de protection pour une installation facile.
                     </p>
                     <p>
-                    Besoin d'une rallonge électrique ? Nous en louons aussi pour seulement 10€. Nos devis sont personnalisés en fonction de la distance, vous assurant un service adapté et économique. Avec Youplaboum, transformez votre événement en un moment magique et inoubliable !
+                    Nos devis sont personnalisés en fonction de la distance, vous assurant un service adapté et économique. Avec Youplaboum, transformez votre événement en un moment magique et inoubliable !
                     </p>
                 </div>
                 <div className='choisContainer'>

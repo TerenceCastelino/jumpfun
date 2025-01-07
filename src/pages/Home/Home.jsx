@@ -9,6 +9,8 @@ import CardRedirection from '../../components/card/cardRedirection/CardRedirecti
 import castleLogo  from '../../assets/images/logos/iconBouncyCastle/bouncy-castleGold.png'
 import gameLogo  from '../../assets/images/logos/iconGame/puzzleGold.png'
 import TopOfPage from '../../components/topOfPage/TopOfPage';
+import FeatureHighlight from '../../components/featureHighlight/FeatureHighlight';
+import ReusableButton from '../../components/reusableButton/ReusableButton';
 
 
 function Home(props) {
@@ -31,46 +33,55 @@ function Home(props) {
             <TopOfPage src={YouplaBoum} alt="Placeholder Image" title='Acceuil' message={'Bienvenu chez YouplaBoum !!!'} />
         </div>
 
-            <div className='a'>
+            <div>
+            <div className='descriptionContainer'>
+                <div className='titleDescription'>
+                    <h2>Découvrez Youpla Boum : Faites Bondir la Joie dans Vos Événements !</h2>
+                </div>
+                <div className='descriptionTexteImgContainer'>
+                    <div className='texteDescription'>
+                        <p>Bienvenue chez Youpla Boum, votre partenaire de confiance pour transformer chaque fête en une aventure inoubliable ! Spécialisés dans la location de châteaux gonflables, de jeux gonflables et de grands jeux en bois, nous mettons tout en œuvre pour apporter du rire, du plaisir et des souvenirs impérissables à vos événements.</p>
+                        
+                        
+                        <ReusableButton text="Contactez nous" link="/Contact_et_Devis" />
 
-                <div className='descriptionContainer'>
-                    <div className='titleDescription'>
-                        <h2>Découvrez Youpla Boum : Faites Bondir la Joie dans Vos Événements !</h2>
+                       
+                        
+
                     </div>
-                    <div className='descriptionTexteImgContainer'>
-                        <div className='texteDescription'>
-                            <p>Bienvenue chez Youpla Boum, votre partenaire de confiance pour transformer chaque fête en une aventure inoubliable ! Spécialisés dans la location de châteaux gonflables, de jeux gonflables et de grands jeux en bois, nous mettons tout en œuvre pour apporter du rire, du plaisir et des souvenirs impérissables à vos événements.</p>
-                            <button>Contact</button>
-                        </div>
-                        <div className='imgHomeContainer'>
-                            <img src={YouplaBoum} alt="Youpla Boum Logo" className='styleLogo'/>
-                        </div>
+                    <div className='imgHomeContainer'>
+                        <img src={YouplaBoum} alt="Youpla Boum Logo" className='styleLogo'/>
                     </div>
                 </div>
+            </div>
 
-                <div className='valueContainer'>
-                    <div className='valeurTitle'>
-                        <h2>Pourquoi Choisir Youpla Boum ?</h2>
-                    </div>
-
-                    <div className='value'>
-                        <div className='valueSide'>
-                            <h3>Qualité et Sécurité Avant Tout</h3>
-                            <p>Chez Youpla Boum, la sécurité de vos enfants est notre priorité absolue. Tous nos équipements sont rigoureusement entretenus et répondent aux normes de sécurité les plus strictes. Vous pouvez donc profiter de votre fête en toute tranquillité d'esprit, sachant que vos petits aventuriers s'amusent en toute sécurité.</p>
-                            <img src={closeup} alt="Qualité et Sécurité" />
-                        </div>
-                        <div className='valueSide'>
-                            <h3>Une Gamme Variée et Séduisante</h3>
-                            <p>Que ce soit un château gonflable coloré, un parcours d'obstacles époustouflant ou des jeux en bois géants pour les plus grands, nous avons tout ce qu'il faut pour rendre votre événement unique. Nos équipements sont conçus pour captiver l’imagination des enfants et offrir des heures de divertissement.</p>
-                            <img src={closeup2} alt="Gamme Variée" />
-                        </div>
-                        <div className='valueSide'>
-                            <h3>Des Souvenirs Éternels</h3>
-                            <p>Avec Youpla Boum, chaque saut, chaque éclat de rire et chaque moment de joie devient un souvenir précieux. Nous nous efforçons de faire en sorte que chaque expérience avec nous soit mémorable, car nous savons que les meilleures fêtes sont celles dont on se souvient toute une vie.</p>
-                            <img src={closeup3} alt="Souvenirs Éternels" />
-                        </div>
-                    </div>
+            <div className='valueContainer'>
+                <div className='valeurTitle'>
+                    <h2>Pourquoi Choisir Youpla Boum ?</h2>
                 </div>
+
+                <div className='value'>                 
+                                       
+                        <FeatureHighlight 
+                        title="Qualité et Sécurité Avant Tout" 
+                        description="Chez Youpla Boum, la sécurité de vos enfants est notre priorité absolue. Tous nos équipements sont rigoureusement entretenus et répondent aux normes de sécurité les plus strictes. Vous pouvez donc profiter de votre fête en toute tranquillité d'esprit, sachant que vos petits aventuriers s'amusent en toute sécurité." 
+                        imgSrc={closeup} 
+                        imgAlt="Qualité et Sécurité Avant Tout"/>
+
+                        <FeatureHighlight 
+                        title="Une Gamme Variée et Séduisante" 
+                        description="Que ce soit un château gonflable coloré, un parcours d'obstacles époustouflant ou des jeux en bois géants pour les plus grands, nous avons tout ce qu'il faut pour rendre votre événement unique. Nos équipements sont conçus pour captiver l’imagination des enfants et offrir des heures de divertissement." 
+                        imgSrc={closeup2} 
+                        imgAlt="Une Gamme Variée et Séduisante"/>
+                        
+                        <FeatureHighlight 
+                        title="Des Souvenirs Éternels" 
+                        description="Avec Youpla Boum, chaque saut, chaque éclat de rire et chaque moment de joie devient un souvenir précieux. Nous nous efforçons de faire en sorte que chaque expérience avec nous soit mémorable, car nous savons que les meilleures fêtes sont celles dont on se souvient toute une vie." 
+                        imgSrc={closeup3} 
+                        imgAlt="Souvenirs Éternels"/>
+                    
+                </div>
+            </div>
 
             </div>
 
@@ -86,6 +97,9 @@ function Home(props) {
                 <CardRedirection img={gameLogo} message={'Prochainement sur chez nous et potentiellement chez vous'} title={'Jeu En Bois'} link="/#" />
 
             </div>
+            
+         
+
         </div>
     );
 }

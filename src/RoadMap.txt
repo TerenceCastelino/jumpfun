@@ -1,0 +1,17 @@
+Description de kevin sur le bas de page de la homepage (rassurer le client)
+
+Suprimer la location de rallonge "OK"
+
+Ajouter au devi de location pas de frais de deplacement dans un rayon de 20km de trasni ralonge piquet compris dans la location
+
+Formulaire
+
+creation de la bandelette reseau sociau dans la navbar et dans le footer
+
+bouton a cocher pour valider le formulaire ceci est le reglement
+
+calculateur en fonction cacher pour calculer le devis
+
+sistheme agenda pour la location
+
+faire les jeu et autre 
