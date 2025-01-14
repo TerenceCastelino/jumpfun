@@ -1,20 +1,78 @@
+/* ===========================
+   1. Couleurs de la marque (Brand Colors)
+   =========================== */
+//    @brand-primary: ;  // Couleur principale de la marque (ex : utilisée pour les boutons principaux, titres, etc.)
+//    @brand-secondary: ;  // Couleur secondaire (ex : utilisée pour les éléments secondaires comme les liens ou accents mineurs)
+//    @brand-tertiary: ;  // Couleur tertiaire (optionnelle, pour des éléments décoratifs ou de contraste)
+   @brand-accent:rgb(255, 212, 153) ;  // Accent, couleur utilisée pour attirer l'attention (ex : appels à l'action ou notifications spéciales)
+   
+   /* ===========================
+      2. Couleurs neutres (Neutral Colors)
+      =========================== */
+   @neutral-white:#ffffff ;  // Blanc pur ou couleur très claire (ex : arrière-plan principal)
+   @neutral-light:#f0f0f0e1 ;  // Couleur claire pour arrière-plans secondaires
+   @neutral-medium:rgb(204, 204, 204) ;  // Gris moyen, utilisé pour les bordures ou séparateurs
+   @neutral-dark:#555555 ;  // Gris foncé pour les textes secondaires
+   @neutral-black:#333 ;  // Noir ou quasi-noir pour les textes principaux
+   
+    /* ===========================
+    . États interactifs (State Colors)
+      =========================== */
+@state-success: #4CAF50;  // Vert doux et apaisant pour indiquer le succès (ex : validation, messages positifs)
+@state-warning: #FF9800;  // Orange chaleureux pour les avertissements sans être agressif
+@state-error: #F44336;  // Rouge élégant et subtil pour les erreurs ou alertes critiques
+@state-info: #2196F3;  // Bleu clair et moderne pour les messages informatifs
 
+   
+   /* ===========================
+      4. Couleurs contextuelles (Context Colors)
+      =========================== */
+   @context-header-bg:@neutral-black;  // Couleur de fond des en-têtes (ex : barres de navigation ou titres de sections)
+//    @context-sidebar-bg: ;  // Fond des barres latérales (ex : menus ou panneaux d'options)
+   @context-footer-bg:@neutral-white ;  // Fond des pieds de page
+//    @context-card-bg: ;  // Fond des cartes ou zones de contenu encadré
+   
+   /* ===========================
+      5. Couleurs de texte (Text Colors)
+      =========================== */
+//    @text-primary: ;  // Couleur pour le texte principal (ex : noir ou gris très foncé)
+//    @text-secondary: ;  // Texte secondaire, moins important (ex : gris moyen)
+//    @text-link: ;  // Couleur des liens hypertexte
+//    @text-link-hover: ;  // Couleur des liens au survol
+//    @text-placeholder: ;  // Couleur du texte d’espace réservé (ex : dans les champs de formulaire)
+   
+   /* ===========================
+      6. Couleurs d'arrière-plan (Background Colors)
+      =========================== */
+//    @background-main: ;  // Arrière-plan principal de la page ou application
+//    @background-alt: ;  // Arrière-plan alternatif pour les sections contrastées
+//    @background-highlight: ;  // Couleur de fond pour les zones mises en avant
+   
+   /* ===========================
+      7. Couleurs des bordures (Border Colors)
+      =========================== */
+//    @border-light: ;  // Bordure claire pour les zones subtiles (ex : champs de formulaire)
+//    @border-medium: ;  // Bordure standard (ex : séparateurs entre sections)
+//    @border-dark: ;  // Bordure sombre pour les zones importantes
+   
+   /* ===========================
+      8. Couleurs spéciales (Special Colors)
+      =========================== */
+//    @special-hover: ;  // Couleur utilisée pour les effets de survol
+   @special-shadow:rgba(0, 0, 0, 0.1) ;  // Couleur des ombres portées (ex : pour les cartes ou boutons)
+   @special-gradient:linear-gradient(135deg, #f9f9f9, #eaeaea) ;  // Couleur ou combinaison utilisée pour les dégradés décoratifs
+   
+   /* ===========================
+9. Couleurs transparentes (Transparent Colors)
+=========================== */
+@transparent-light: #f3efefb9;  // Transparence claire pour fond ou overlays
+@transparent-dark: rgba(22, 8, 1, 0.84);  // Transparence sombre pour ombrages ou overlays
+@transparent-medium: rgba(128, 128, 128, 0.5);  // Transparence intermédiaire pour des éléments subtils
 
-// Couleurs principales
-@primary: #333;               // Couleur principale utilisée pour le texte foncé
-@secondary: aliceblue;        // Couleur secondaire pour les éléments de texte clairs
-@accent: rgb(255, 212, 153);  // Couleur d'accent utilisée dans les bordures et éléments de fond
-
-// Variantes de noir
-@blackTransparent: rgba(0, 0, 0, 0.5);  // Noir transparent
-@blackOpaque: #000000; 
-@witheTransparent:#f3efefb9 ;            // Noir opaque
-
-// Arrière-plans
-@background-dark: rgba(22, 8, 1, 0.84);  // Couleur de fond foncée pour les conteneurs
-@background-header: rgba(7, 2, 1, 0.764);  // Couleur de fond pour l’en-tête
-@background-light: #f9f9f9;              // Couleur de fond claire pour d'autres sections
-
-// Couleurs de texte
-@text-color-dark: #333;    // Couleur de texte sombre
-@text-color-light: #fff;   // Couleur de texte clair
+/* ===========================
+10. Effet de flou (Blur Effects)
+=========================== */
+@blur-light: blur(5px);  // Effet de flou léger
+@blur-medium: blur(10px);  // Effet de flou modéré
+@blur-strong: blur(20px);  // Effet de flou intense
+   

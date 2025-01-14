@@ -1,0 +1,136 @@
+@import '../../../../../utils/styles/colors.less';
+
+.featureHighlight {
+  background: @neutral-medium;
+  display: flex;
+  flex: 1 1 33.3333%;
+  min-width: 33.3333%;
+  max-width: 100vw;
+ border-top: 2px solid @brand-accent;
+  align-items: center;
+  min-height: 10vw;
+  
+ 
+
+
+  
+
+  img {
+    width: 10vw;
+    margin-left: 2vw;
+    object-fit: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -50%;
+    min-height: 10vw;
+  
+  }
+
+  .containerHighlight {
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 70%;
+    min-width: 20%;
+    
+   
+  
+
+    h3 {
+ 
+      min-height: 5vw;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      
+     
+    }
+
+    p {
+      text-align: center;
+      min-height: 7vw;
+      line-height: 1.5;
+      font-size: 0.7rem;
+      color: @neutral-dark;
+    
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .featureHighlight {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15vw;
+    border: 2px solid @neutral-black;
+    height: auto;
+    position: relative;
+
+
+    img {
+      width: 20%;
+      height: auto;
+      position: absolute;
+      margin-left: 0;
+      padding: 13px;
+     
+    }
+
+    .containerHighlight {
+      margin-left: 0;
+      width: 90%;
+      text-align: center;
+      min-height: 20vw; 
+
+      h3 {
+        font-size: 1.5rem;
+        margin-top: 7vw;
+      }
+
+      p {
+        
+        min-height: 1vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .featureHighlight {
+    flex-direction: column;
+    align-items: center;
+   
+    height: auto; 
+    margin-top: 15vw;
+    min-height: 30vw;
+
+    img {
+      margin-left: 0;
+      width: 20%; 
+      object-fit: cover; 
+    }
+
+    .containerHighlight {
+      margin-left: 0;
+      width: 90%; 
+      text-align: center;
+      height: 20vw;
+
+      h3 {
+        font-size: 3vw; 
+        margin-bottom: 2vw;
+      }
+
+      p {
+        font-size: 2vw; 
+        line-height: 3vw; 
+        height: 10vw;
+      }
+    }
+  }
+}
+

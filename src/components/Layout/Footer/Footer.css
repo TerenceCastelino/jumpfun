@@ -1,29 +1,41 @@
-.footer {
-  padding: 20px;
+/* ===========================
+   1. Couleurs de la marque (Brand Colors)
+   =========================== */
+/* ===========================
+      2. Couleurs neutres (Neutral Colors)
+      =========================== */
+/* ===========================
+    . États interactifs (State Colors)
+      =========================== */
+/* ===========================
+      4. Couleurs contextuelles (Context Colors)
+      =========================== */
+/* ===========================
+      5. Couleurs de texte (Text Colors)
+      =========================== */
+/* ===========================
+      6. Couleurs d'arrière-plan (Background Colors)
+      =========================== */
+/* ===========================
+      7. Couleurs des bordures (Border Colors)
+      =========================== */
+/* ===========================
+      8. Couleurs spéciales (Special Colors)
+      =========================== */
+/* ===========================
+9. Couleurs transparentes (Transparent Colors)
+=========================== */
+/* ===========================
+10. Effet de flou (Blur Effects)
+=========================== */
+.FeatureHighlight {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  text-align: center;
-  /* Centrer le texte */
-  color: #ffffff;
-  background-color: #d77f056f;
-  align-items: center;
+  flex-wrap: wrap;
 }
-.footer a {
-  color: #ffffff;
-  margin-right: 15px;
-  text-decoration: none;
-}
-.footer a:hover {
-  color: #f5d432;
-}
-.footer a img {
-  height: 20px;
-  width: auto;
-}
-@media (max-width: 800px) {
-  .footer {
-    color: #ff7fe3;
-    font-size: 53px;
-    line-height: 79.5px;
+@media (max-width: 1000px) {
+  .FeatureHighlight {
+    flex-direction: column;
   }
 }

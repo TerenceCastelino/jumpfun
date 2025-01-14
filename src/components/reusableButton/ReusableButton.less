@@ -8,8 +8,8 @@
 
 .reusableButton {
 
-  background-color: @primary !important;        // Couleur principale pour le fond
-  color: @secondary;                            // Texte clair
+  background-color:  @neutral-black !important;        // Couleur principale pour le fond
+  color:@neutral-white ;                            // Texte clair
   
   border-radius: 5px;
   font-size: 1rem;
@@ -21,9 +21,10 @@
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 
   &:hover {
-    background-color: @accent;                 // Accent sur le fond au survol
-    color: @accent;                            // Texte sombre au survol
+    background-color: @brand-accent;                 // Accent sur le fond au survol
+    color: @brand-accent;                            // Texte sombre au survol
     transform: scale(1.1);                     // Effet de zoom
-    border: 2px solid @accent;                    // Bordure d'accent
+    border: 2px solid @brand-accent;      
+    border-radius: 8px;              // Bordure d'accent
   }
 }

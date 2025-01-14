@@ -1,3 +1,15 @@
+/* ===========================
+   1. Couleurs de la marque (Brand Colors)
+   =========================== */
+/* ===========================
+      2. Couleurs neutres (Neutral Colors)
+      =========================== */
+/* ===========================
+    . États interactifs (State Colors)
+      =========================== */
+/* ===========================
+      8. Couleurs spéciales (Special Colors)
+      =========================== */
 .buttonContainer {
   display: flex;
   justify-content: center;
@@ -5,7 +17,7 @@
 }
 .reusableButton {
   background-color: #333 !important;
-  color: aliceblue;
+  color: #ffffff;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
@@ -20,4 +32,5 @@
   color: #ffd499;
   transform: scale(1.1);
   border: 2px solid #ffd499;
+  border-radius: 8px;
 }

@@ -110,13 +110,13 @@ function CastleDetail() {
                   </div>
 
                 </div>
-                
-                <div className='detailedDescription'>
+
+               
                   
                   <h3>Description détaillée</h3>
                   <p>{castle.description}</p>
                   <ReusableButton text="Contactez nous" link="/Contact_et_Devis" />
-                </div>    
+               
 
               </div>
             </div>

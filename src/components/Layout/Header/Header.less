@@ -1,63 +1,183 @@
+// @import '../../../utils/styles/colors.less';
+
+
+// .invisible{
+//   display: none;
+//   opacity: 0;
+//   pointer-events: none; /* Désactive les clics */
+// }
+// .header {
+//   opacity: 1;
+//   transition: opacity 0.3s ease;
+//   position: relative;
+//   padding: 20px;
+//   display: flex;
+//   justify-content: space-around;
+//   text-align: center;
+//   align-items: center;
+//   color: @neutral-white; /* Utilisation de la couleur secondaire */
+//   overflow: hidden;
+//   z-index: 1;
+//   background-color:  @context-header-bg; /* Utilisation de la couleur de fond pour l'en-tête */
+//   // width: 100vw;
+
+//   p {
+//     font-family: 'Dancing Script', cursive;
+//     color: @neutral-white; /* Utilisation de la couleur de texte clair */
+//     position: relative;
+//     transition: color 0.3s ease, transform 0.3s ease;
+
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       left: 0;
+//       bottom: -2px;
+//       width: 100%;
+//       height: 2px;
+//       background-color: @neutral-white; /* Utilisation de la couleur d'accent */
+//       transform: scaleX(0);
+//       transform-origin: left;
+//       transition: transform 0.3s ease;
+//     }
+//   }
+
+//   img {
+//     width: 50px;
+//     transition: transform 0.3s ease;
+//   }
+
+//   a {
+//     color: @neutral-white; /* Utilisation de la couleur secondaire */
+//     margin-right: 15px;
+//     text-decoration: none;
+//     font-size: 1.2rem;
+//     font-weight: 800;
+
+//     .inactive {
+//       &:hover {
+//         color:  @neutral-black; /* Utilisation de la couleur principale lors du survol */
+
+//         img {
+//           transform: scale(1.3);
+//         }
+
+//         p {
+//           color: @neutral-white; /* Utilisation de la couleur de texte clair */
+//           transform: translateY(7px);
+
+//           &::after {
+//             transform: scaleX(1);
+//           }
+//         }
+//       }
+//     }
+
+//     .active {
+//       p {
+//         color: @brand-accent; /* Utilisation de la couleur d'accent pour les éléments actifs */
+//         transform: translateY(7px);
+//       }
+//       &:hover {
+//         p {
+//           color: @brand-accent; /* Utilisation de la couleur d'accent lors du survol */
+//           transform: translateY(7px);
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+
+// @media (max-width: 1000px) {
+//   .header {
+//     flex-direction: column; /* Navbar devient verticale */
+//     width: 100vw;
+//     height: 100vh;
+//     position: fixed; /* Navbar toujours visible */
+//     top: 0;
+//     left: 0;
+//     background-color: @context-header-bg;
+//     padding: 40px 20px;
+//     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+//     animation: slideIn 1s ease; /* Appliquer l'animation */
+    
+    
+//     /* Lorsque la navbar est visible, la translation est annulée */
+//     &.visible {
+//       animation: slideOut 1s ease; /* Animation pour faire sortir la navbar */
+//     }
+
+//     a {
+//       width: 100%; /* Chaque lien occupe toute la largeur */
+//       text-align: center;
+//       margin: 10px 0;
+//       padding: 15px;
+//       background-color: lighten(@context-header-bg, 5%); /* Légère variation pour l'esthétique */
+//       border-radius: 10px;
+//       transition: background-color 0.3s ease;
+
+//       &:hover {
+//         background-color: @neutral-black;
+//       }
+
+//       p {
+//         font-size: 1.5rem; /* Texte plus grand */
+//       }
+
+//       img {
+//         width: 70px; /* Images plus grandes */
+//       }
+//     }
+//   }
+// }
+
+//  /* Définir l'animation pour la navbar qui entre */
+//  @keyframes slideIn {
+//   0% {
+//     transform: translateX(-100%); /* Commence hors de l'écran */
+//   }
+//   100% {
+//     transform: translateX(0%); /* Arrive à sa position normale */
+//   }
+// }
+
+// /* Définir l'animation pour la navbar qui sort */
+// @keyframes slideOut {
+//   0% {
+//     transform: translateX(0%); /* Commence à sa position normale */
+//   }
+//   100% {
+//     transform: translateX(-100%); /* Sort de l'écran */
+//   }
+// }
+
 @import '../../../utils/styles/colors.less';
 
-
-.stripContact {
-  display: flex;
-  justify-content: space-between; /* Sépare le numéro et les icônes */
-  align-items: center;
-  // margin-left: 2vw;
-  // margin-right: 2vw;
-  padding: 0.4vw;
-  border: 2px solid @accent;
-
-  .phoneNumber {
-     margin-left: 2vw;
-    color: black;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease, transform 0.3s ease;
-
-    &:hover {
-      color: darkorange; /* Change la couleur au survol */
-      transform: scale(1.2); /* Ajoute un léger agrandissement */
-    }
-  }
-
-  .socialIcons {
-    display: flex;
-    gap: 1vw; /* Ajoute un espace entre les icônes */
-     margin-right: 2vw;
-
-    a {
-      display: inline-block;
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: scale(1.3); /* Ajoute un léger agrandissement au survol */
-      }
-
-      img {
-        height: 2vw;
-      }
-    }
-  }
+.invisible {
+  display: none;
+  opacity: 0;
+  pointer-events: none; /* Désactive les clics */
 }
 
 .header {
+  opacity: 1;
+  transition: opacity 0.3s ease;
   position: relative;
   padding: 20px;
   display: flex;
   justify-content: space-around;
   text-align: center;
   align-items: center;
-  color: @secondary; /* Utilisation de la couleur secondaire */
+  color: @neutral-white; /* Couleur de texte */
   overflow: hidden;
   z-index: 1;
-  background-color: @background-header; /* Utilisation de la couleur de fond pour l'en-tête */
-
+  background-color: @context-header-bg; /* Couleur de fond */
+  
   p {
     font-family: 'Dancing Script', cursive;
-    color: @text-color-light; /* Utilisation de la couleur de texte clair */
+    color: @neutral-white;
     position: relative;
     transition: color 0.3s ease, transform 0.3s ease;
 
@@ -68,7 +188,7 @@
       bottom: -2px;
       width: 100%;
       height: 2px;
-      background-color: @text-color-light; /* Utilisation de la couleur d'accent */
+      background-color: @neutral-white;
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.3s ease;
@@ -81,22 +201,22 @@
   }
 
   a {
-    color: @secondary; /* Utilisation de la couleur secondaire */
+    color: @neutral-white;
     margin-right: 15px;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 800;
 
-    .inactive {
+    &.inactive {
       &:hover {
-        color: @primary; /* Utilisation de la couleur principale lors du survol */
+        color: @neutral-black;
 
         img {
           transform: scale(1.3);
         }
 
         p {
-          color: @text-color-light; /* Utilisation de la couleur de texte clair */
+          color: @neutral-white;
           transform: translateY(7px);
 
           &::after {
@@ -106,17 +226,83 @@
       }
     }
 
-    .active {
+    &.active {
       p {
-        color: @accent; /* Utilisation de la couleur d'accent pour les éléments actifs */
+        color: @brand-accent;
         transform: translateY(7px);
       }
       &:hover {
         p {
-          color: @accent; /* Utilisation de la couleur d'accent lors du survol */
+          color: @brand-accent;
           transform: translateY(7px);
         }
       }
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .header {
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: @context-header-bg;
+    padding: 40px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Gestion du défilement pour les petits écrans */
+
+    &.slide-in {
+      animation: slideIn 1s ease forwards;
+    }
+
+    &.slide-out {
+      animation: slideOut 1s ease forwards;
+    }
+
+    a {
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+      padding: 15px;
+      background-color: lighten(@context-header-bg, 5%);
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: @neutral-black;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      img {
+        width: 70px;
+      }
+    }
+  }
+}
+
+/* Définir l'animation pour la navbar qui entre */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Définir l'animation pour la navbar qui sort */
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+

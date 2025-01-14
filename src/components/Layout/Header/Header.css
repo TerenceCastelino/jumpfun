@@ -1,59 +1,58 @@
-.stripContact {
-  display: flex;
-  justify-content: space-between;
-  /* Sépare le numéro et les icônes */
-  align-items: center;
-  padding: 0.4vw;
-  border: 2px solid #ffd499;
-}
-.stripContact .phoneNumber {
-  margin-left: 2vw;
-  color: black;
-  text-decoration: none;
-  font-size: 1.2em;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-.stripContact .phoneNumber:hover {
-  color: darkorange;
-  /* Change la couleur au survol */
-  transform: scale(1.2);
-  /* Ajoute un léger agrandissement */
-}
-.stripContact .socialIcons {
-  display: flex;
-  gap: 1vw;
-  /* Ajoute un espace entre les icônes */
-  margin-right: 2vw;
-}
-.stripContact .socialIcons a {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-.stripContact .socialIcons a:hover {
-  transform: scale(1.3);
-  /* Ajoute un léger agrandissement au survol */
-}
-.stripContact .socialIcons a img {
-  height: 2vw;
+/* ===========================
+   1. Couleurs de la marque (Brand Colors)
+   =========================== */
+/* ===========================
+      2. Couleurs neutres (Neutral Colors)
+      =========================== */
+/* ===========================
+    . États interactifs (State Colors)
+      =========================== */
+/* ===========================
+      4. Couleurs contextuelles (Context Colors)
+      =========================== */
+/* ===========================
+      5. Couleurs de texte (Text Colors)
+      =========================== */
+/* ===========================
+      6. Couleurs d'arrière-plan (Background Colors)
+      =========================== */
+/* ===========================
+      7. Couleurs des bordures (Border Colors)
+      =========================== */
+/* ===========================
+      8. Couleurs spéciales (Special Colors)
+      =========================== */
+/* ===========================
+9. Couleurs transparentes (Transparent Colors)
+=========================== */
+/* ===========================
+10. Effet de flou (Blur Effects)
+=========================== */
+.invisible {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  /* Désactive les clics */
 }
 .header {
+  opacity: 1;
+  transition: opacity 0.3s ease;
   position: relative;
   padding: 20px;
   display: flex;
   justify-content: space-around;
   text-align: center;
   align-items: center;
-  color: aliceblue;
-  /* Utilisation de la couleur secondaire */
+  color: #ffffff;
+  /* Couleur de texte */
   overflow: hidden;
   z-index: 1;
-  background-color: rgba(7, 2, 1, 0.764);
-  /* Utilisation de la couleur de fond pour l'en-tête */
+  background-color: #333;
+  /* Couleur de fond */
 }
 .header p {
   font-family: 'Dancing Script', cursive;
-  color: #fff;
-  /* Utilisation de la couleur de texte clair */
+  color: #ffffff;
   position: relative;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -64,8 +63,7 @@
   bottom: -2px;
   width: 100%;
   height: 2px;
-  background-color: #fff;
-  /* Utilisation de la couleur d'accent */
+  background-color: #ffffff;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -75,35 +73,87 @@
   transition: transform 0.3s ease;
 }
 .header a {
-  color: aliceblue;
-  /* Utilisation de la couleur secondaire */
+  color: #ffffff;
   margin-right: 15px;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 800;
 }
-.header a .inactive:hover {
+.header a.inactive:hover {
   color: #333;
-  /* Utilisation de la couleur principale lors du survol */
 }
-.header a .inactive:hover img {
+.header a.inactive:hover img {
   transform: scale(1.3);
 }
-.header a .inactive:hover p {
-  color: #fff;
-  /* Utilisation de la couleur de texte clair */
+.header a.inactive:hover p {
+  color: #ffffff;
   transform: translateY(7px);
 }
-.header a .inactive:hover p::after {
+.header a.inactive:hover p::after {
   transform: scaleX(1);
 }
-.header a .active p {
+.header a.active p {
   color: #ffd499;
-  /* Utilisation de la couleur d'accent pour les éléments actifs */
   transform: translateY(7px);
 }
-.header a .active:hover p {
+.header a.active:hover p {
   color: #ffd499;
-  /* Utilisation de la couleur d'accent lors du survol */
   transform: translateY(7px);
+}
+@media (max-width: 1000px) {
+  .header {
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding: 40px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    /* Gestion du défilement pour les petits écrans */
+  }
+  .header.slide-in {
+    animation: slideIn 1s ease forwards;
+  }
+  .header.slide-out {
+    animation: slideOut 1s ease forwards;
+  }
+  .header a {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #404040;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+  .header a:hover {
+    background-color: #333;
+  }
+  .header a p {
+    font-size: 1.5rem;
+  }
+  .header a img {
+    width: 70px;
+  }
+}
+/* Définir l'animation pour la navbar qui entre */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* Définir l'animation pour la navbar qui sort */
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }

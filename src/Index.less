@@ -8,14 +8,21 @@
   box-sizing: border-box;
 }
 
+
+
+
+
 h1, h2, h3 {
   font-family: 'Dancing Script', cursive;
   font-stretch: ultra-expanded;
 }
 
-p {
+p{
   font-family: 'Londrina+Sketch', cursive;
+
 }
+
+
 
 /* Taille fluide pour les grands écrans (desktop) */
 h1 {
@@ -32,7 +39,12 @@ h3 {
 
 p {
   font-size: clamp(0.875rem, 2.5vw, 1rem);  // La taille varie entre 0.875rem et 1rem
+ 
 }
+
+
+
+
 
 /* Ajustement pour les tablettes (max-width: 768px) */
 @media (max-width: 768px) {
@@ -50,8 +62,12 @@ p {
 
   p {
     font-size: clamp(0.875rem, 3vw, 1rem);  // La taille varie entre 0.875rem et 1rem
+    
   }
 }
+
+
+
 
 /* Ajustement pour les smartphones (max-width: 480px) */
 @media (max-width: 480px) {

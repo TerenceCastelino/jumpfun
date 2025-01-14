@@ -1,0 +1,142 @@
+/* ===========================
+   1. Couleurs de la marque (Brand Colors)
+   =========================== */
+/* ===========================
+      2. Couleurs neutres (Neutral Colors)
+      =========================== */
+/* ===========================
+    . États interactifs (State Colors)
+      =========================== */
+/* ===========================
+      4. Couleurs contextuelles (Context Colors)
+      =========================== */
+/* ===========================
+      5. Couleurs de texte (Text Colors)
+      =========================== */
+/* ===========================
+      6. Couleurs d'arrière-plan (Background Colors)
+      =========================== */
+/* ===========================
+      7. Couleurs des bordures (Border Colors)
+      =========================== */
+/* ===========================
+      8. Couleurs spéciales (Special Colors)
+      =========================== */
+/* ===========================
+9. Couleurs transparentes (Transparent Colors)
+=========================== */
+/* ===========================
+10. Effet de flou (Blur Effects)
+=========================== */
+.footerContainer {
+  background: #ffffff;
+  color: #333;
+  border: 2px solid #ffd499;
+  display: flex;
+  min-height: 30vw;
+}
+.footerContainer a {
+  text-decoration: none;
+  color: #555555;
+}
+.footerContainer .socialMediaContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 20px;
+}
+.footerContainer .socialMediaContainer .footerLogo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.footerContainer .socialMediaContainer .footerLogo img {
+  width: 50%;
+}
+.footerContainer .socialMediaContainer h3 {
+  text-align: center;
+  margin-bottom: 2vw;
+}
+.footerContainer .socialMediaContainer .socialMediaIcons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.footerContainer .socialMediaContainer .socialMediaIcons img {
+  width: 25px;
+  margin-bottom: 2vw;
+}
+.footerContainer .socialMediaContainer .socialMediaIcons p {
+  margin-left: 2vw;
+}
+.footerContainer .servicesAndAddressContainer {
+  width: 50%;
+  display: flex;
+}
+.footerContainer .servicesAndAddressContainer .servicesContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.footerContainer .servicesAndAddressContainer .servicesContainer h3 {
+  padding-top: 10vw;
+  margin-bottom: 30px;
+}
+.footerContainer .servicesAndAddressContainer .servicesContainer p {
+  margin-bottom: 15px;
+}
+.footerContainer .servicesAndAddressContainer .addressContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.footerContainer .servicesAndAddressContainer .addressContainer h3 {
+  padding-top: 10vw;
+  margin-bottom: 30px;
+}
+.footerContainer .servicesAndAddressContainer .addressContainer p {
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+.footerContainer .servicesAndAddressContainer .addressContainer img {
+  width: 25px;
+  height: 25px;
+}
+.displayElement {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 1000px) {
+  .FeatureHighlight {
+    flex-direction: column;
+  }
+  .footerContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footerContainer .displayElement {
+    justify-content: space-between;
+  }
+  .footerContainer .socialMediaContainer,
+  .footerContainer .servicesAndAddressContainer {
+    width: 100%;
+    text-align: center;
+  }
+  .footerContainer .servicesAndAddressContainer {
+    flex-direction: column;
+  }
+  .footerContainer .servicesAndAddressContainer .servicesContainer,
+  .footerContainer .servicesAndAddressContainer .addressContainer {
+    width: 100%;
+    align-items: center;
+  }
+  .footerContainer .servicesAndAddressContainer .servicesContainer h3,
+  .footerContainer .servicesAndAddressContainer .addressContainer h3 {
+    padding-top: 5vw;
+  }
+  .footerContainer .servicesAndAddressContainer .servicesContainer p,
+  .footerContainer .servicesAndAddressContainer .addressContainer p {
+    margin-left: 0;
+  }
+}

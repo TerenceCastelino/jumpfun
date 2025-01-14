@@ -1,0 +1,98 @@
+@import '../../../../../utils/styles/colors.less';
+// @import '../../../../../utils/styles/mixins/mixinQuery.less'
+
+// Variables
+
+@border-color: #ddd;
+@link-color: #f38181;
+@link-hover-color: #d35454;
+
+
+.zoneLivraisonContainer {
+    background:  @special-gradient;
+    // border-radius: 8px;
+    padding: 2vw;
+    box-shadow: 0 4px 10px  @special-shadow;
+    border-top: 2px solid @brand-accent;
+
+    .contenuContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background: white;
+        border: 2px solid @brand-accent;
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 2vw;
+
+        .texteContainer {
+            width: 50%;
+            padding: 2vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h3 {
+                font-size: 1.8rem;
+                font-weight: bold;
+                color: @neutral-black;
+                margin-bottom: 5rem;
+                text-align: center;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+                margin-bottom: 1rem;
+                color: @neutral-dark;
+                text-align: justify;
+
+                a {
+                    color: @link-color;
+                    font-weight: bold;
+                    text-decoration: underline;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: @link-hover-color;
+                    }
+                }
+            }
+        }
+
+        .imageCarteContainer {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-width: 90%;
+                border: 4px solid @border-color;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    /* Mobile-Friendly Design */
+    @media (max-width: 1000px) {
+        .contenuContainer {
+            flex-direction: column;
+            text-align: center;
+
+            .texteContainer {
+                width: 100%;
+                padding: 1vw;
+            }
+
+            .imageCarteContainer {
+                width: 100%;
+                margin-top: 1rem;
+
+                img {
+                    max-width: 80%;
+                }
+            }
+        }
+    }
+}

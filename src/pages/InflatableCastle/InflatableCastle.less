@@ -1,4 +1,4 @@
-@import '../../utils//styles/colors.less';
+@import '../../utils/styles/colors.less';
 
 .cards-container {
     width: 100%;
@@ -6,6 +6,7 @@
     .display {
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
     }
 
     .container-style(@linkBg, @justifyContent) {
@@ -16,8 +17,8 @@
         padding: 30px;
         justify-content: @justifyContent;
         align-items: center;
-        border-bottom: 5px solid @primary; /* Utilisation de la couleur principale pour la bordure */
-        border-top: 5px solid @primary; /* Utilisation de la couleur principale pour la bordure */
+        border-bottom: 5px solid  @neutral-black; /* Utilisation de la couleur principale pour la bordure */
+        border-top: 5px solid  @neutral-black; /* Utilisation de la couleur principale pour la bordure */
         margin-top: 70px;
         margin-bottom: 30px;
 
@@ -27,8 +28,9 @@
             margin-bottom: 15px;
             font-size: 3rem;
             font-weight: 700;
-            color: @text-color-dark; /* Utilisation de la couleur de texte sombre */
+            color:  @neutral-black /* Utilisation de la couleur de texte sombre */
         }
+    
     }
 
     .containerGirl {
@@ -47,7 +49,7 @@
 .card {
     flex: 0 1 calc(33.333% - 20px);
     margin: 10px;
-    border: 2px solid @accent; /* Ajout d'une bordure avec la couleur d'accent */
+    border: 2px solid @brand-accent; /* Ajout d'une bordure avec la couleur d'accent */
     border-radius: 10px; /* Arrondir les coins des cartes */
     transition: transform 0.3s ease; /* Ajout d'une transition pour l'effet de survol */
 
@@ -58,15 +60,16 @@
 
 .introductionContainer{
     width: 90%;
-    // border: 3px solid @accent;
+   
     margin: 100px auto  ;
     padding: 2vw;
-    background-color:@witheTransparent;
-    color:@primary;
-    backdrop-filter: blur(1.5px);
+    background-color:@transparent-light;
+    color:@neutral-black;
+    backdrop-filter: @blur-light;
     border-radius: 50px;
 
     .introduction{
+    
         padding: 1vw;
 
         h2 {
@@ -110,6 +113,6 @@
 
 .anchor span {
     background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour le texte */
-    padding: 10px 100px;
+    padding: 2vw 4vw;
     border-radius: 5px;
 }

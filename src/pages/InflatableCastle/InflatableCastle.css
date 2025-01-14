@@ -1,9 +1,19 @@
+/* ===========================
+      2. Couleurs neutres (Neutral Colors)
+      =========================== */
+/* ===========================
+    . États interactifs (State Colors)
+      =========================== */
+/* ===========================
+      8. Couleurs spéciales (Special Colors)
+      =========================== */
 .cards-container {
   width: 100%;
 }
 .cards-container .display {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .cards-container .containerGirl {
   background-image: url('C:/Users/teren/Desktop/funjumplocation/jumpfun/src/assets/images/fondCard/4994981.jpg');
@@ -26,8 +36,7 @@
   margin-bottom: 15px;
   font-size: 3rem;
   font-weight: 700;
-  color: #333;
-  /* Utilisation de la couleur de texte sombre */
+  color: #333 /* Utilisation de la couleur de texte sombre */;
 }
 .cards-container .containerBoys {
   background-image: url('C:/Users/teren/Desktop/funjumplocation/jumpfun/src/assets/images/fondCard/580.jpg');
@@ -50,8 +59,7 @@
   margin-bottom: 15px;
   font-size: 3rem;
   font-weight: 700;
-  color: #333;
-  /* Utilisation de la couleur de texte sombre */
+  color: #333 /* Utilisation de la couleur de texte sombre */;
 }
 .cards-container .containerMixte {
   background-image: url('C:/Users/teren/Desktop/funjumplocation/jumpfun/src/assets/images/fondCard/13104.jpg');
@@ -74,8 +82,7 @@
   margin-bottom: 15px;
   font-size: 3rem;
   font-weight: 700;
-  color: #333;
-  /* Utilisation de la couleur de texte sombre */
+  color: #333 /* Utilisation de la couleur de texte sombre */;
 }
 .card {
   flex: 0 1 calc(33.333% - 20px);
@@ -97,7 +104,7 @@
   padding: 2vw;
   background-color: #f3efefb9;
   color: #333;
-  backdrop-filter: blur(1.5px);
+  backdrop-filter: blur(5px);
   border-radius: 50px;
 }
 .introductionContainer .introduction {
@@ -139,6 +146,6 @@
 .anchor span {
   background-color: rgba(0, 0, 0, 0.5);
   /* Fond semi-transparent pour le texte */
-  padding: 10px 100px;
+  padding: 2vw 4vw;
   border-radius: 5px;
 }
