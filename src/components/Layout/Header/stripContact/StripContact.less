@@ -8,9 +8,17 @@
   align-items: center;
   padding: 0.4vw;
   border: 2px solid @brand-accent;
+  background-color: @neutral-white;
+  
+
+  
+
 
   .btnActif{
     display: none;
+  
+    width: 100%;
+   
   }
 
   img{
@@ -23,6 +31,7 @@
      text-decoration: none;
      font-size: 1.2em;
      transition: color 0.3s ease, transform 0.3s ease;
+    
      
 
      div {
@@ -56,6 +65,7 @@
     display: flex;
     gap: 1vw; /* Ajoute un espace entre les icônes */
     margin-right: 2vw;
+  
 
     a {
       display: inline-block;
@@ -70,20 +80,54 @@
   }
 }
 
-@media (max-width: 1000px) {
-  .stripContact{
+// @media (max-width: 1000px) {
+//   .stripContact{
+//     z-index: 100;
 
-    .btnActif{
-      display: block;
+//     .btnActif{
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//     }
+
+//     img{
+     
+//       height: 7vw;
+//       margin-right: 3vw;
+//     }
+//     p{
+//       display: none;
+//     }
+//   }
+//   .socialIcons{
+//     display: none;
+//   }
+// }
+
+@media (max-width: 1000px) {
+  .stripContact {
+    z-index: 100;
+
+    .btnActif {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    img{
-     
+    img {
       height: 7vw;
       margin-right: 3vw;
     }
-    p{
+
+    p {
       display: none;
     }
+  }
+
+  .stripContact .socialIcons  {
+    display: none;
+  }
+  .phoneNumber{
+    display: none;
   }
 }

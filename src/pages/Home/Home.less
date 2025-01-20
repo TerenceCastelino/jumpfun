@@ -15,69 +15,7 @@
 
   
   
-  .headerTitleContainer {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 70%;
-    // border: 10px solid rgba(31, 31, 31, 0.585);
-    background-image: url('../../assets/images/imageFond/fondRR.jpg');
-    background-size: cover;
-    justify-content: space-around;
-    box-sizing: border-box; /* Inclure les bordures dans les dimensions */
-    z-index: 1;
-    animation: move2Background 30s infinite alternate;
-
-    .image3 {
-      position: absolute;
-      z-index: 2;
-      background-image: url('../../assets/images/imageFond/fondTransColors2.png');
-    //   background: #a1039ca0;
-      height: 100%; /* Utiliser 100% pour correspondre à la hauteur du conteneur parent */
-      width: 100%;
-      box-sizing: border-box; /* Inclure les bordures dans les dimensions */
-      border: 4px solid @brand-accent;
-      animation: moveBackground 30s infinite alternate;
-    }
   
-    .titleContainer {
-        z-index: 3;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: auto;
-      background-color: rgba(255, 253, 230, 0.125);
-      padding: 10px;
-      backdrop-filter: blur(3px);
-    
-  
-      h1 {
-        font-size: 10rem;
-        font-weight: 900;
-      }
-      h2{
-        text-decoration: underline;
-      text-decoration-color: rgb(5, 5, 5); /* Couleur de l'underline */
-      text-decoration-style: solid; /* Style de l'underline : solid, dotted, dashed, double, wavy */
-      text-decoration-thickness: 1px; /* Épaisseur de l'underline */
-        text-underline-offset: 7px;
-        border-radius: 15px;
-      }
-    }
-  
-    .styleLogo {
-        z-index: 3;
-      margin: auto;
-      background-color: rgba(0, 0, 0, 0.733);
-      backdrop-filter: blur(3px);
-      border: 10px solid rgb(255, 212, 153);
-      height: 80%;
-      width: auto;
-      border-radius: 50%;
-      box-sizing: border-box; /* Inclure les bordures dans les dimensions */
-    }
-  }
   .descriptionContainer{
     border: 2px solid black;
     margin: 4vw 20vw ;
@@ -188,53 +126,53 @@
   
   
   
-  @keyframes moveBackground {
-    0% {
-      background-position: center;
-      background-size: 100% 400px;
-    }
-    25% {
-      background-position: 52% 48%;
-      background-size: 101% 405px;
-    }
-    50% {
-      background-position: 51% 49%;
-      background-size: 125%  510px;
-    }
-    75% {
-      background-position: 52% 50%;
-      background-size: 101% 390px;
-    }
-    100% {
-      background-position: center;
-      background-size: 100% 400px;;
-    }
-  }
+  // @keyframes moveBackground {
+  //   0% {
+  //     background-position: center;
+  //     background-size: 100% 400px;
+  //   }
+  //   25% {
+  //     background-position: 52% 48%;
+  //     background-size: 101% 405px;
+  //   }
+  //   50% {
+  //     background-position: 51% 49%;
+  //     background-size: 125%  510px;
+  //   }
+  //   75% {
+  //     background-position: 52% 50%;
+  //     background-size: 101% 390px;
+  //   }
+  //   100% {
+  //     background-position: center;
+  //     background-size: 100% 400px;;
+  //   }
+  // }
   
-  @keyframes move2Background {
-    0% {
-      background-position: center;
-    }
-    // 25%{
-    //   background-position: 80% 80%;
-    // }
-    50% {
-      background-position: 40% 40%;
-      // background-position: 10px 10px;
-    }
-    100% {
-      background-position: center;
+  // @keyframes move2Background {
+  //   0% {
+  //     background-position: center;
+  //   }
+  //   // 25%{
+  //   //   background-position: 80% 80%;
+  //   // }
+  //   50% {
+  //     background-position: 40% 40%;
+  //     // background-position: 10px 10px;
+  //   }
+  //   100% {
+  //     background-position: center;
       
-    }
-  }
+  //   }
+  // }
 
 
 
 /* Media Queries */
 @media (max-width: 768px) {
-  .containerHome {
-    padding: 0 5vw;
-  }
+  // .containerHome {
+  //   padding: 0 5vw;
+  // }
 
   .headerTitleContainer {
     height: 300px;
@@ -242,9 +180,9 @@
     justify-content: center;
   }
 
-  .styleLogo {
-    height: 70%;
-  }
+  // .styleLogo {
+  //   height: 70%;
+  // }
 
   .descriptionContainer {
     margin: 2vw 5vw;
@@ -282,7 +220,7 @@
 
 @media (max-width: 480px) {
   .containerHome {
-    padding: 0 2vw;
+    // padding: 0 2vw;
   }
 
   .headerTitleContainer {
@@ -292,9 +230,9 @@
 
   
 
-  .styleLogo {
-    height: 60%;
-  }
+  // .styleLogo {
+  //   height: 60%;
+  // }
 
   .descriptionContainer {
     margin: 2vw 3vw;

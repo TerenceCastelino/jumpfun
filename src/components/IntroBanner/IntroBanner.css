@@ -1,0 +1,144 @@
+/* ===========================
+   1. Couleurs de la marque (Brand Colors)
+   =========================== */
+/* ===========================
+      2. Couleurs neutres (Neutral Colors)
+      =========================== */
+/* ===========================
+    . États interactifs (State Colors)
+      =========================== */
+/* ===========================
+      4. Couleurs contextuelles (Context Colors)
+      =========================== */
+/* ===========================
+      5. Couleurs de texte (Text Colors)
+      =========================== */
+/* ===========================
+      6. Couleurs d'arrière-plan (Background Colors)
+      =========================== */
+/* ===========================
+      7. Couleurs des bordures (Border Colors)
+      =========================== */
+/* ===========================
+      8. Couleurs spéciales (Special Colors)
+      =========================== */
+/* ===========================
+9. Couleurs transparentes (Transparent Colors)
+=========================== */
+/* ===========================
+10. Effet de flou (Blur Effects)
+=========================== */
+.headerTitleContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 70%;
+  background-image: url('../../assets/images/imageFond/fondRR.jpg');
+  background-size: cover;
+  justify-content: space-around;
+  box-sizing: border-box;
+  /* Inclure les bordures dans les dimensions */
+  z-index: 1;
+  animation: move2Background 30s infinite alternate;
+}
+.headerTitleContainer .image3 {
+  position: absolute;
+  z-index: 2;
+  background-image: url('../../assets/images/imageFond/fondTransColors2.png');
+  height: 100%;
+  /* Utiliser 100% pour correspondre à la hauteur du conteneur parent */
+  width: 100%;
+  box-sizing: border-box;
+  /* Inclure les bordures dans les dimensions */
+  border: 4px solid #ffd499;
+  animation: moveBackground 25s infinite alternate;
+}
+.headerTitleContainer .titleContainer {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: rgba(255, 253, 230, 0.125);
+  padding: 10px;
+  backdrop-filter: blur(3px);
+}
+.headerTitleContainer .titleContainer h1 {
+  font-size: 10rem;
+  font-weight: 900;
+}
+.headerTitleContainer .titleContainer h2 {
+  text-decoration: underline;
+  text-decoration-color: #050505;
+  /* Couleur de l'underline */
+  text-decoration-style: solid;
+  /* Style de l'underline : solid, dotted, dashed, double, wavy */
+  text-decoration-thickness: 1px;
+  /* Épaisseur de l'underline */
+  text-underline-offset: 7px;
+  border-radius: 15px;
+}
+.headerTitleContainer .styleLogo {
+  z-index: 3;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.733);
+  border: 10px solid #ffd499;
+  height: auto;
+  width: 33vw;
+  border-radius: 50%;
+  box-sizing: border-box;
+  /* Inclure les bordures dans les dimensions */
+}
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 3rem !important;
+    font-weight: 900;
+    margin-top: 10vw;
+  }
+  h2 {
+    font-size: 1.3rem !important;
+    margin-bottom: 10vw;
+  }
+  .headerTitleContainer .styleLogo {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1rem !important;
+  }
+}
+@keyframes moveBackground {
+  0% {
+    background-position: center;
+    background-size: 100% 100%;
+  }
+  25% {
+    background-position: 52% 48%;
+    background-size: 101% 110%;
+  }
+  50% {
+    background-position: 51% 49%;
+    background-size: 125%  150%;
+  }
+  75% {
+    background-position: 52% 50%;
+    background-size: 101% 130%;
+  }
+  100% {
+    background-position: center;
+    background-size: 100% 100%;
+  }
+}
+@keyframes move2Background {
+  0% {
+    background-position: center;
+  }
+  50% {
+    background-position: 40% 40%;
+  }
+  100% {
+    background-position: center;
+  }
+}

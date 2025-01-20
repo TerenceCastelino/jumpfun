@@ -1,0 +1,68 @@
+/* ===========================
+   1. Couleurs de la marque (Brand Colors)
+   =========================== */
+/* ===========================
+      2. Couleurs neutres (Neutral Colors)
+      =========================== */
+/* ===========================
+    . États interactifs (State Colors)
+      =========================== */
+/* ===========================
+      4. Couleurs contextuelles (Context Colors)
+      =========================== */
+/* ===========================
+      5. Couleurs de texte (Text Colors)
+      =========================== */
+/* ===========================
+      6. Couleurs d'arrière-plan (Background Colors)
+      =========================== */
+/* ===========================
+      7. Couleurs des bordures (Border Colors)
+      =========================== */
+/* ===========================
+      8. Couleurs spéciales (Special Colors)
+      =========================== */
+/* ===========================
+9. Couleurs transparentes (Transparent Colors)
+=========================== */
+/* ===========================
+10. Effet de flou (Blur Effects)
+=========================== */
+label.hamburger {
+  display: block;
+  background: #ffffff;
+  width: 40px;
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 2vw;
+  margin-top: 2vw;
+}
+label.hamburger .line {
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: #333;
+  transition: 0.5s;
+}
+label.hamburger .line:nth-child(1) {
+  top: 12px;
+}
+label.hamburger .line:nth-child(2) {
+  top: 24px;
+}
+label.hamburger .line:nth-child(3) {
+  top: 36px;
+}
+input#hamburger {
+  display: none;
+}
+#hamburger:checked + .hamburger .line:nth-child(1) {
+  transform: translateY(12px) rotate(-45deg);
+}
+#hamburger:checked + .hamburger .line:nth-child(2) {
+  opacity: 0;
+}
+#hamburger:checked + .hamburger .line:nth-child(3) {
+  transform: translateY(-12px) rotate(45deg);
+}

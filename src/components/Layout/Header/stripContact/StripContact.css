@@ -37,9 +37,11 @@ h1 {
   align-items: center;
   padding: 0.4vw;
   border: 2px solid #ffd499;
+  background-color: #ffffff;
 }
 .stripContact .btnActif {
   display: none;
+  width: 100%;
 }
 .stripContact img {
   height: 2vw;
@@ -91,14 +93,25 @@ h1 {
   /* Ajoute un léger agrandissement au survol */
 }
 @media (max-width: 1000px) {
+  .stripContact {
+    z-index: 100;
+  }
   .stripContact .btnActif {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .stripContact img {
     height: 7vw;
     margin-right: 3vw;
   }
   .stripContact p {
+    display: none;
+  }
+  .stripContact .socialIcons {
+    display: none;
+  }
+  .phoneNumber {
     display: none;
   }
 }

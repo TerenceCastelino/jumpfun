@@ -34,6 +34,15 @@
   pointer-events: none;
   /* Désactive les clics */
 }
+.stripContact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4vw;
+  border: 2px solid #ffd499;
+  z-index: 10;
+  /* StripContact est au-dessus des autres éléments */
+}
 .header {
   opacity: 1;
   transition: opacity 0.3s ease;
@@ -46,7 +55,7 @@
   color: #ffffff;
   /* Couleur de texte */
   overflow: hidden;
-  z-index: 1;
+  z-index: 7;
   background-color: #333;
   /* Couleur de fond */
 }
@@ -78,9 +87,18 @@
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 800;
+  display: block;
+  padding: 10px 15px;
+  transition: background-color 0.3s, transform 0.3s ease;
+  position: relative;
 }
-.header a.inactive:hover {
+.header a:hover {
   color: #333;
+  background-color: #404040;
+}
+.header a.active p {
+  color: #ffd499;
+  transform: translateY(7px);
 }
 .header a.inactive:hover img {
   transform: scale(1.3);
@@ -92,15 +110,22 @@
 .header a.inactive:hover p::after {
   transform: scaleX(1);
 }
-.header a.active p {
-  color: #ffd499;
-  transform: translateY(7px);
-}
-.header a.active:hover p {
-  color: #ffd499;
-  transform: translateY(7px);
+.header img {
+  width: 50px;
+  transition: transform 0.3s ease;
 }
 @media (max-width: 1000px) {
+  .stripContact {
+    z-index: 100;
+    /* Assure que StripContact reste toujours au-dessus sur petits écrans */
+    height: 8vh;
+    width: 100vw;
+    position: fixed;
+  }
+  .gg {
+    height: 8vh;
+    width: 100vw;
+  }
   .header {
     flex-direction: column;
     width: 100vw;
@@ -115,10 +140,10 @@
     /* Gestion du défilement pour les petits écrans */
   }
   .header.slide-in {
-    animation: slideIn 1s ease forwards;
+    animation: slideIn 0.7s ease forwards;
   }
   .header.slide-out {
-    animation: slideOut 1s ease forwards;
+    animation: slideOut 0.7s ease forwards;
   }
   .header a {
     width: 100%;

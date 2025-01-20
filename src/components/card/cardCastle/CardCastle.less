@@ -90,20 +90,42 @@
 }
 
 /* Responsivité */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .containerCard {
         max-width: 90%;  // Ajuste la largeur pour les écrans mobiles
+        
+        .img-container img  {
+                height: 40vh;
+   
+        }
     }
+
+    // .description {
+    //     padding: 15px;
+    //     width: 100%;
+
+    //     h3 {
+    //         font-size: 1.2em; // Taille adaptée aux écrans plus petits
+    //     }
+
+    //     p {
+    //         font-size: 0.9em;
+    //     }
+    // }
 
     .description {
         padding: 15px;
+        width: 100%;
 
         h3 {
-            font-size: 1.2em; // Taille adaptée aux écrans plus petits
+            font-size: 2em !important;
+           
         }
 
         p {
-            font-size: 0.9em;
+            font-size: 1.4em!important;
+            
+            
         }
     }
 }

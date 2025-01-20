@@ -2,17 +2,12 @@ import React from 'react';
 import './Home.css';
 
 import YouplaBoum from '../../assets/images/logos/logoYouplaTrans.png'; 
-// import closeup from '../../assets/images/vecteezy_closeup-of-hand-putting-to-assemble-quality-assurance-icon_6932770.jpg'; 
-// import closeup2 from '../../assets/images/vecteezy_motivational-quote-things-end-but-memories-last-forever_7971351.jpg'; 
-// import closeup3 from '../../assets/images/vecteezy_wool-balls-that-form-the-heart-of-diversity-on-white-background_18730685.jpg';
 
-// import souvenir from '../../assets/images/Souvenir.png'
-// import gammeVariée from '../../assets/images/variétéeGame.png'
 import CardRedirection from '../../components/card/cardRedirection/CardRedirection';
 import castleLogo  from '../../assets/images/logos/iconBouncyCastle/bouncy-castleGold.png'
 import gameLogo  from '../../assets/images/logos/iconGame/puzzleGold.png'
 import TopOfPage from '../../components/topOfPage/TopOfPage';
-// import FeatureHighlight from '../../components/featureHighlight/FeatureHighlight';
+import IntroBanner from '../../components/IntroBanner/IntroBanner';
 import ReusableButton from '../../components/reusableButton/ReusableButton';
 
 
@@ -24,13 +19,8 @@ function Home(props) {
     return (
         <div className="containerHome">
 
-            <div className='headerTitleContainer'>
-                <div className='image3' />
-                <div className='titleContainer'>
-                    <h1>Youpla Boum</h1>
-                    <h2>Location de chateaux gonflabe, jeux gonflabe et jeux en bois</h2>
-                </div>
-                <img src={YouplaBoum} alt="Youpla Boum Logo" className='styleLogo'/>
+            <div>
+                <IntroBanner/>
             </div>
 
             <div>
