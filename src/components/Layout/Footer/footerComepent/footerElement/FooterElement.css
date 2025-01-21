@@ -115,6 +115,9 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  .footerContainer .socialMediaContainer .socialMediaIcons p {
+    display: none !important;
+  }
   .footerContainer .displayElement {
     justify-content: space-between;
   }

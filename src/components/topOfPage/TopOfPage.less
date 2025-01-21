@@ -1,18 +1,19 @@
 @import '../../utils//styles/colors.less';
 
 .containerStyle {
-    height: 250px;
+    height: auto;
     width: 100%;
     background-repeat: no-repeat;
-    border: 10px solid @brand-accent; /* Utilisation de la couleur d'accent */
+    border: 4px solid @brand-accent; /* Utilisation de la couleur d'accent */
     border-radius: 0 0 20% 20%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     background: @transparent-dark; /* Utilisation de la couleur de fond sombre */
+    padding: 40px;
 
     .descriptif{
-        width: 50%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -21,8 +22,12 @@
 
    
     h1 {
-        font-size: 5rem;
+        font-size: 3rem;
         color: @brand-accent; /* Utilisation de la couleur de texte sombre pour le titre */
+        text-align: center;
+    }
+    p{
+        text-align: center;
     }
 
     .descriptif {
@@ -32,4 +37,13 @@
         align-items: center;
         border-radius: 0 0 0 30%;
     }
+}
+
+@media (max-width: 1000px){
+    .containerStyle{
+        // height: auto;
+        border: 5px solid @brand-accent; /* Utilisation de la couleur d'accent */
+
+    }
+
 }

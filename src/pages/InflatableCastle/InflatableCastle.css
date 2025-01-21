@@ -167,6 +167,19 @@
 .anchor span {
   background-color: rgba(0, 0, 0, 0.5);
   /* Fond semi-transparent pour le texte */
-  padding: 2vw 4vw;
+  padding: 2vw 2vw;
   border-radius: 5px;
+}
+@media (max-width: 1024px) {
+  .introduction {
+    padding: 3vw !important;
+    text-align: center;
+  }
+  .introduction h2 {
+    font-size: 2rem !important;
+    margin-bottom: 5vw !important;
+  }
+  .introduction p {
+    font-size: 1rem !important;
+  }
 }

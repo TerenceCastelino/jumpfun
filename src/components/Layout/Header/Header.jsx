@@ -4,7 +4,7 @@ import "./Header.css";
 
 import headerLogos from "../../../datas/headerLogo/headerLogo";
 import StripContact from "./stripContact/StripContact";
-import HamburgerButton from "../../hamburgerButton/HamburgerButton/HamburgerButton";
+
 
 function Header({ isMenuOpen, onToggleMenu }) {
   const { acceuil, castle, jeuxGonflabe, contactUs } = headerLogos;
@@ -70,7 +70,7 @@ function Header({ isMenuOpen, onToggleMenu }) {
 
   return (
     <div>
-        {/* <HamburgerButton isOpen={isMenuOpen} onToggle={onToggleMenu} /> */}
+  
       <StripContact isMenuOpen={menuOpen} onToggleMenu={toggleMenu} className='stripContact ' /> {/* Barre de contact en haut, avec le bouton de menu */}
       <div className="gg"></div>
 

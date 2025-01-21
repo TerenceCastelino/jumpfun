@@ -8,12 +8,32 @@
     . États interactifs (State Colors)
       =========================== */
 /* ===========================
+      4. Couleurs contextuelles (Context Colors)
+      =========================== */
+/* ===========================
+      5. Couleurs de texte (Text Colors)
+      =========================== */
+/* ===========================
+      6. Couleurs d'arrière-plan (Background Colors)
+      =========================== */
+/* ===========================
+      7. Couleurs des bordures (Border Colors)
+      =========================== */
+/* ===========================
       8. Couleurs spéciales (Special Colors)
       =========================== */
+/* ===========================
+9. Couleurs transparentes (Transparent Colors)
+=========================== */
+/* ===========================
+10. Effet de flou (Blur Effects)
+=========================== */
 .buttonContainer {
   display: flex;
   justify-content: center;
-  margin-top: 2vw;
+  margin-top: 4vw;
+  margin-bottom: 4vw;
+  width: 100%;
 }
 .reusableButton {
   background-color: #333 !important;
@@ -23,8 +43,8 @@
   cursor: pointer;
   text-align: center;
   display: inline-block;
-  width: 80%;
-  height: 3vw;
+  width: 100%;
+  height: 5vw;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 .reusableButton:hover {
@@ -33,4 +53,16 @@
   transform: scale(1.1);
   border: 2px solid #ffd499;
   border-radius: 8px;
+}
+@media (max-width: 1000px) {
+  .reusableButton {
+    height: 8vw;
+    padding: 2vw;
+  }
+}
+@media (max-width: 500px) {
+  .reusableButton {
+    height: 10vw;
+    padding: 1vw;
+  }
 }

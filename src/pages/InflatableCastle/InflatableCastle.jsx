@@ -3,6 +3,7 @@ import TopOfPage from '../../components/topOfPage/TopOfPage';
 import CardCastle from '../../components/card/cardCastle/CardCastle';
 import castelData from '../../datas/castelData/castelData';
 import logoCastleLogo from '../../assets/images/logos/iconBouncyCastle/bouncy-castleGold.png';
+import Spacer from '../../components/Spacer/Spacer';
 
 import './InflatableCastle.css'
 
@@ -102,6 +103,8 @@ function InflatableCastle() {
                         />
                     ))}
                 </div>
+                
+                <Spacer/>
             </div>
         </div>
     );

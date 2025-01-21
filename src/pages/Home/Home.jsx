@@ -9,6 +9,7 @@ import gameLogo  from '../../assets/images/logos/iconGame/puzzleGold.png'
 import TopOfPage from '../../components/topOfPage/TopOfPage';
 import IntroBanner from '../../components/IntroBanner/IntroBanner';
 import ReusableButton from '../../components/reusableButton/ReusableButton';
+import Spacer from '../../components/Spacer/Spacer'
 
 
 function Home(props) {
@@ -24,10 +25,10 @@ function Home(props) {
             </div>
 
             <div>
-            <TopOfPage src={YouplaBoum} alt="Placeholder Image" title='Acceuil' message={'Bienvenu chez YouplaBoum !!!'} />
+            <TopOfPage /* src={YouplaBoum} alt="Placeholder Image" */ title='Acceuil'/* message={'Bienvenu chez YouplaBoum !!!'}*/ />
             </div>
 
-            
+            {/* src={YouplaBoum} alt="Placeholder Image" */}
                 
             <div className='descriptionContainer'>
                 <div className='titleDescription'>
@@ -69,29 +70,6 @@ function Home(props) {
                 
             </div>
 
-
-{/* <div className='FeatureHighlight'>
-    <FeatureHighlight 
-                        title="Des Souvenirs Éternels et Magiques" 
-                        description="Chaque saut et éclat de rire devient un souvenir inoubliable. Nous créons des moments mémorables pour des fêtes inoubliables." 
-                        imgSrc={souvenir} 
-                        imgAlt="Souvenirs Éternels"/>
-
-            <FeatureHighlight 
-                        title="Une Gamme Variée et Séduisante" 
-                        description="Châteaux et jeux gonflables, jeux ludiques pour petits et grands : tout pour des moments magiques et des instants de joie !" 
-                        imgSrc={gammeVariée} 
-                        imgAlt="Une Gamme Variée et Séduisante"/>
-
-            <FeatureHighlight 
-                        title="Qualité et Sécurité Avant Tout" 
-                        description="Chez Youpla Boum, la sécurité avant tout ! Nos jeux, certifiés par Vinçotte, garantissent des heures de fun en toute sérénité." 
-                        imgSrc={souvenir} 
-                        imgAlt="Qualité et Sécurité Avant Tout"/>
-</div> */}
-            
-           
-
                         <div>
                             <CardRedirection img={castleLogo} message={messageOne} title={'Chateau Gonflabe'} link="/Chateaux_Gonflabe" />
                         </div>
@@ -109,7 +87,7 @@ function Home(props) {
           
 
             
-            
+            <Spacer/>
          
 
         </div>

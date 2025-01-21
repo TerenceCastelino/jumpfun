@@ -34,8 +34,14 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+.invisibleb {
+  background-color: aqua !important;
+}
 @media (max-width: 1000px) {
   .FeatureHighlight {
     flex-direction: column;
   }
+}
+.invisibleb {
+  background-color: aqua !important;
 }

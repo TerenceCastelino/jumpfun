@@ -1,18 +1,40 @@
 /* ===========================
+   1. Couleurs de la marque (Brand Colors)
+   =========================== */
+/* ===========================
       2. Couleurs neutres (Neutral Colors)
       =========================== */
 /* ===========================
     . États interactifs (State Colors)
       =========================== */
 /* ===========================
+      4. Couleurs contextuelles (Context Colors)
+      =========================== */
+/* ===========================
+      5. Couleurs de texte (Text Colors)
+      =========================== */
+/* ===========================
+      6. Couleurs d'arrière-plan (Background Colors)
+      =========================== */
+/* ===========================
+      7. Couleurs des bordures (Border Colors)
+      =========================== */
+/* ===========================
       8. Couleurs spéciales (Special Colors)
       =========================== */
+/* ===========================
+9. Couleurs transparentes (Transparent Colors)
+=========================== */
+/* ===========================
+10. Effet de flou (Blur Effects)
+=========================== */
 .castle-detail {
   width: 100%;
   height: 100%;
 }
 .castle-detail .back {
-  width: 50%;
+  margin: auto;
+  width: 90%;
 }
 .castle-detail .back button:hover {
   transform: scale(1.03);
@@ -143,4 +165,19 @@
 .castle-detail .flexContainer .details .dimensions p {
   margin-left: 10px;
   /* Espacement entre l'image et le texte */
+}
+@media (max-width: 1000px) {
+  .castle-detail .flexContainer {
+    flex-direction: column;
+  }
+  .castle-detail .flexContainer .image-container {
+    width: 100%;
+    height: 30vh;
+  }
+  .castle-detail .flexContainer .details {
+    width: 100%;
+  }
+  .castle-detail .flexContainer .details .dimensions img {
+    height: 10vw !important;
+  }
 }

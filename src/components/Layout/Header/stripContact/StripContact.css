@@ -38,6 +38,7 @@ h1 {
   padding: 0.4vw;
   border: 2px solid #ffd499;
   background-color: #ffffff;
+  min-height: 70px;
 }
 .stripContact .btnActif {
   display: none;

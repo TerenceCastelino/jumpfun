@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import castelData from '../../datas/castelData/castelData';
 import TopOfPage from '../../components/topOfPage/TopOfPage';
 import ReusableButton from '../../components/reusableButton/ReusableButton';
+import Spacer from '../../components/Spacer/Spacer'
 
 import btnImages from '../../assets/images/right-arrow.png'
 import heightImages from '../../assets/images/height.png'
@@ -129,6 +130,7 @@ function CastleDetail() {
       <div className='sugestion'>
 <h1>Sugestion</h1>
       </div>
+      <Spacer/>
     </div>
   );
 }
