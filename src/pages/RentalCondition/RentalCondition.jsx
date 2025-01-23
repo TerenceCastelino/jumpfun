@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
+
 import TopOfPage from '../../components/topOfPage/TopOfPage';
 import logoCastleLogo from '../../assets/images/logos/iconContact/mailboxGold.png';
 import './RentalCondition.css';
@@ -7,31 +9,47 @@ import Spacer from '../../components/Spacer/Spacer';
 import generalInfo from '../../datas/generalInfo/generalInfo';
 
 // Composant RentalCondition
-function RentalCondition({ preselectedData }) {
+function RentalCondition() {
+
+    const location = useLocation();
+
+    // Extraire les paramètres de l'URL
+    const params = new URLSearchParams(location.search);
+    const preselectedData = {
+        articleName: params.get('articleName'),
+        typeArticle:params.get('typeArticle')
+        
+    };
+
     const today = new Date().toISOString().split('T')[0]; // Date actuelle au format YYYY-MM-DD
 
+    // Initialisation de l'état du formulaire avec les données préremplies
     const [formData, setFormData] = useState({
-        name: preselectedData?.name || '',
-        phone: preselectedData?.phone || '',
-        email: preselectedData?.email || '',
-        deliveryLocation: preselectedData?.deliveryLocation || '',
-        article: preselectedData?.article || '',
-        deliveryDate: preselectedData?.deliveryDate || '',
-        deliveryTime: preselectedData?.deliveryTime || '',
-        question: '',
-        agreement: false,
+        // name: preselectedData?.name || '', // Nom du client
+        // phone: preselectedData?.phone || '', // Numéro de téléphone
+        // email: preselectedData?.email || '', // Email
+        // deliveryLocation: preselectedData?.deliveryLocation || '', // Lieu de livraison
+        // deliveryDate: preselectedData?.deliveryDate || '', // Date de livraison
+        // deliveryTime: preselectedData?.deliveryTime || '', // Heure de livraison
+        article: preselectedData?.typeArticle || '', // Type d'article sélectionné
+        question: '', // Question optionnelle
+        agreement: false, // Case d'acceptation des termes et conditions
+        articleName: preselectedData?.articleName || '', // Nom du château
     });
 
+    // État des erreurs de validation
     const [errors, setErrors] = useState({});
 
+    // Fonction pour gérer les changements dans les champs du formulaire
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
         setFormData((prevData) => ({
             ...prevData,
-            [name]: type === 'checkbox' ? checked : value,
+            [name]: type === 'checkbox' ? checked : value, // Mise à jour de l'état selon le type de champ
         }));
     };
 
+    // Validation du formulaire
     const validateForm = () => {
         let valid = true;
         const newErrors = {};
@@ -59,6 +77,10 @@ function RentalCondition({ preselectedData }) {
             valid = false;
             newErrors.article = 'Vous devez sélectionner un article.';
         }
+        if (!formData.articleName.trim()) {
+            valid = false;
+            newErrors.articleName = 'Vous devez sélectionner un article.';
+        }
         if (!formData.deliveryDate) {
             valid = false;
             newErrors.deliveryDate = 'La date de livraison est obligatoire.';
@@ -79,6 +101,7 @@ function RentalCondition({ preselectedData }) {
         return valid;
     };
 
+    // Soumission du formulaire
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validateForm()) {
@@ -87,9 +110,11 @@ function RentalCondition({ preselectedData }) {
                 `Email: ${formData.email}%0A%0A` +
                 `Lieu de livraison: ${formData.deliveryLocation}%0A%0A` +
                 `Article: ${formData.article}%0A%0A` +
+                `Nom de l'article: ${formData.articleName || 'Non précisé'}%0A%0A` +
                 `Date de livraison: ${formData.deliveryDate}%0A%0A` +
                 `Heure de livraison: ${formData.deliveryTime || 'Non précisée'}%0A%0A` +
                 `Question: ${formData.question || 'Aucune question'}%0A%0A`;
+                
             window.location.href = mailto;
         }
     };
@@ -149,6 +174,17 @@ function RentalCondition({ preselectedData }) {
                     {errors.deliveryLocation && <p className="error-message">{errors.deliveryLocation}</p>}
                 </div>
                 <div className="form-group">
+                    <label>Nom de l'article :</label>
+                    <input
+                        type="text"
+                        name="articleName"
+                        value={formData.articleName}
+                        onChange={handleChange}
+                        className={errors.articleName ? 'error' : ''}
+                    />
+                    {errors.articleName && <p className="error-message">{errors.articleName}</p>}
+                </div>
+                <div className="form-group">
                     <label>Je suis intéressé(e) par :</label>
                     <select
                         name="article"
@@ -157,9 +193,9 @@ function RentalCondition({ preselectedData }) {
                         className={errors.article ? 'error' : ''}
                     >
                         <option value="">-- Sélectionnez un article --</option>
-                        <option value="Château Gonflable">Château Gonflable</option>
-                        <option value="Jeux en Bois">Jeux en Bois</option>
-                        <option value="Barbe à Papa">Barbe à Papa</option>
+                        <option value="Château">Château Gonflable</option>
+                        <option value="Jeux">Jeux</option>
+                        {/* <option value="Barbe à Papa">Barbe à Papa</option> */}
                     </select>
                     {errors.article && <p className="error-message">{errors.article}</p>}
                 </div>
@@ -213,6 +249,7 @@ function RentalCondition({ preselectedData }) {
                     Envoyer le devis
                 </button>
             </form>
+            <Spacer />
             <Spacer />
         </div>
     );
