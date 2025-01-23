@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/jumpfun/static/css/main.e61829fe.css",
-    "main.js": "/jumpfun/static/js/main.cbae62de.js",
+    "main.css": "/jumpfun/static/css/main.b48c4762.css",
+    "main.js": "/jumpfun/static/js/main.5f2461f4.js",
     "static/media/13104.jpg": "/jumpfun/static/media/13104.001c91b94e692194ea1e.jpg",
     "static/media/fondRR.jpg": "/jumpfun/static/media/fondRR.d2b9861d7a5e6522e492.jpg",
     "static/media/dinosaure4.jpg": "/jumpfun/static/media/dinosaure4.86d796df4b867a2f479a.jpg",
@@ -53,11 +53,11 @@
     "static/media/mailboxWhite.png": "/jumpfun/static/media/mailboxWhite.800bf0ed3801dccd50a8.png",
     "static/media/facebook (2).png": "/jumpfun/static/media/facebook (2).9a6e212e214e7aef33e5.png",
     "index.html": "/jumpfun/index.html",
-    "main.e61829fe.css.map": "/jumpfun/static/css/main.e61829fe.css.map",
-    "main.cbae62de.js.map": "/jumpfun/static/js/main.cbae62de.js.map"
+    "main.b48c4762.css.map": "/jumpfun/static/css/main.b48c4762.css.map",
+    "main.5f2461f4.js.map": "/jumpfun/static/js/main.5f2461f4.js.map"
   },
   "entrypoints": [
-    "static/css/main.e61829fe.css",
-    "static/js/main.cbae62de.js"
+    "static/css/main.b48c4762.css",
+    "static/js/main.5f2461f4.js"
   ]
 }
