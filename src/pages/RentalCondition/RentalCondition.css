@@ -1,0 +1,146 @@
+/* ===========================
+   1. Couleurs de la marque (Brand Colors)
+   =========================== */
+/* ===========================
+      2. Couleurs neutres (Neutral Colors)
+      =========================== */
+/* ===========================
+    . États interactifs (State Colors)
+      =========================== */
+/* ===========================
+      4. Couleurs contextuelles (Context Colors)
+      =========================== */
+/* ===========================
+      5. Couleurs de texte (Text Colors)
+      =========================== */
+/* ===========================
+      6. Couleurs d'arrière-plan (Background Colors)
+      =========================== */
+/* ===========================
+      7. Couleurs des bordures (Border Colors)
+      =========================== */
+/* ===========================
+      8. Couleurs spéciales (Special Colors)
+      =========================== */
+/* ===========================
+9. Couleurs transparentes (Transparent Colors)
+=========================== */
+/* ===========================
+10. Effet de flou (Blur Effects)
+=========================== */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group label {
+  font-weight: bold;
+  color: #555555;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  background: #f0f0f0e1;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ffd499;
+  box-shadow: 0 0 5px #ffd499;
+}
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #F44336;
+  box-shadow: 0 0 5px #F44336;
+}
+.form-group input.valid,
+.form-group select.valid,
+.form-group textarea.valid {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px #4CAF50;
+}
+.form-group .error-message {
+  color: #F44336;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: none;
+}
+.form-group .error-message.visible {
+  display: block;
+}
+.agreement {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.agreement input[type="checkbox"] {
+  margin: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+.agreement a {
+  color: #ffd499;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.agreement a:hover {
+  color: #ffbf66;
+}
+.submit-btn {
+  background: #ffd499;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.submit-btn:hover {
+  background: #ffbf66;
+  transform: scale(1.03);
+}
+.submit-btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+.contact-form .optional-question {
+  margin-top: 1.5rem;
+}
+.contact-form .optional-question label {
+  font-weight: bold;
+  color: #555555;
+}
+.contact-form .optional-question textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+/* Messages de validation */
+.validation {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+.validation.success {
+  color: #4CAF50;
+}
+.validation.error {
+  color: #F44336;
+}

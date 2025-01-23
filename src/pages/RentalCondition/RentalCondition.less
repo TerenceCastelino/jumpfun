@@ -1,0 +1,133 @@
+@import '../../utils/styles/colors.less';
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: @neutral-white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px @special-shadow;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+
+    label {
+        font-weight: bold;
+        color: @neutral-dark;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid @neutral-medium;
+        border-radius: 5px;
+        font-size: 1rem;
+        color: @neutral-black;
+        background: @neutral-light;
+        transition: border-color 0.3s, box-shadow 0.3s;
+
+        &:focus {
+            outline: none;
+            border-color: @brand-accent;
+            box-shadow: 0 0 5px @brand-accent;
+        }
+
+        &.error {
+            border-color: @state-error;
+            box-shadow: 0 0 5px @state-error;
+        }
+
+        &.valid {
+            border-color: @state-success;
+            box-shadow: 0 0 5px @state-success;
+        }
+    }
+
+    .error-message {
+        color: @state-error;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        display: none;
+
+        &.visible {
+            display: block;
+        }
+    }
+}
+
+.agreement {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    input[type="checkbox"] {
+        margin: 0;
+        width: 1.2rem;
+        height: 1.2rem;
+        cursor: pointer;
+    }
+
+    a {
+        color: @brand-accent;
+        text-decoration: underline;
+        font-weight: bold;
+
+        &:hover {
+            color: darken(@brand-accent, 10%);
+        }
+    }
+}
+
+.submit-btn {
+    background: @brand-accent;
+    color: @neutral-white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &:hover {
+        background: darken(@brand-accent, 10%);
+        transform: scale(1.03);
+    }
+
+    &:disabled {
+        background: @neutral-medium;
+        cursor: not-allowed;
+        transform: none;
+    }
+}
+
+.contact-form .optional-question {
+    margin-top: 1.5rem;
+
+    label {
+        font-weight: bold;
+        color: @neutral-dark;
+    }
+
+    textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+}
+
+/* Messages de validation */
+.validation {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+
+    &.success {
+        color: @state-success;
+    }
+
+    &.error {
+        color: @state-error;
+    }
+}

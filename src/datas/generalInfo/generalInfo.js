@@ -32,7 +32,8 @@ const generalInfo = {
         logolocalisation: localisation,
     },
     mail: {
-        link: 'youpla.boum@hotmail.com',
+        link: 'terence30prof@hotmail.com',
+        // link: 'youpla.boum@hotmail.com',
         logoMail: iconMail,
     },
     phone: {

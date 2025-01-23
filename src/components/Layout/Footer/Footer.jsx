@@ -30,22 +30,27 @@ function Footer(props) {
                                  description="Chaque saut et éclat de rire devient un souvenir inoubliable. Nous créons des moments mémorables pour des fêtes inoubliables." 
                                  imgSrc={souvenir} 
                                  imgAlt="Souvenirs Éternels"/>
-                                  
-                <Spacer className='invisibleb'/>
+                  <div className='c'>
+                <Spacer />
+                    </div>                
          
                 <FeatureHighlight 
                                  title="Une Gamme Variée" 
                                  description="Châteaux et jeux gonflables, jeux ludiques pour petits et grands : tout pour des moments magiques et des instants de joie !" 
                                  imgSrc={gammeVariée} 
                                  imgAlt="Une Gamme Variée"/>
-                <Spacer className='invisibleb'/>
+                <div className='c'>
+                <Spacer />
+                    </div>
          
                 <FeatureHighlight 
                                  title="Qualité et Sécurité" 
                                  description="Chez Youpla Boum, la sécurité avant tout ! Nos jeux, certifiés par Vinçotte." 
                                  imgSrc={vincotte} 
                                  imgAlt="Qualité et Sécurité"/>
-                <Spacer className='invisibleb'/>
+               <div className='c'>
+                <Spacer />
+                    </div>
             </div>   
 
             <DeliveryZoneMap/>
